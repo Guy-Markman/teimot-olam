@@ -1,0 +1,50 @@
+.inside {
+  text-align: center;
+}
+
+.inside img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.aboutBox {
+    margin: 0 2em;
+}
+
+.aboutBox section{
+    margin-bottom: 2em;
+}
+
+li {
+    margin-right: 2em;
+}
+
+.imgFamily {
+    height: 280px;
+}
+
+.chef {
+    height: 300px;
+}
+
+.twoColumn { 
+    display: flex;
+    align-items: stretch;
+    gap: 3em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+.textBox {
+    flex: 1;
+    max-width: 80em;
+
+    margin: auto 0
+}

@@ -1,0 +1,43 @@
+/* ===== Home Page ===== */
+body.homepage {
+    text-align: center;
+    background-color: rgba(255,190,245,0.65);
+    padding: 20px;
+  }
+
+body.homepage .homepage-title {
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: #fff2e0;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+body.homepage .gallery figure {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+body.homepage .homepage_food {
+    width: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+body.homepage #login-btn {
+    background: #ff8c00;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: background .3s;
+}
+body.homepage #login-btn:hover {
+    background: #e06b00;
+}

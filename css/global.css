@@ -1,0 +1,43 @@
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.resturantHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.resturantHeader h1 {
+    margin: 0;
+    text-align: unset;
+    height: auto;
+    width: auto;
+}
+.resturantHeader figure {
+    margin: 0
+}
+
+/* ===== Reset בסיסי ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: 'Calibri Light', Calibri, sans-serif;
+    background-color: rgba(255, 190, 245, 0.65);
+    color: #333;
+  }
+  
+
+

@@ -1,0 +1,52 @@
+.reserve {
+    width: 60em;
+    max-width: 95%;
+    margin: 0 auto;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1px;
+    padding-right: 2em;
+    background-color: white;
+}
+
+.reserve h2{
+    margin-bottom: 0.6em;
+}
+
+.formBox{
+    margin-bottom: 0.75em;
+}
+
+.formBox label {
+    font-weight: bold;
+}
+
+.formBox input, .formBoxSubmit input{ 
+    border-radius: 5px;
+    min-height: 2em;    
+}
+
+.formBoxSubmit {
+    margin: 0.75em auto;
+}
+
+.formBoxSubmit input[type="submit"] {
+    background-color: #d66a00;
+    color: white;
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 2em;
+    width: 30em;
+}
+
+.formBoxSubmit input[type="submit"]:hover {
+    filter: brightness(90%);
+}
+
+.formBoxSubmit input[type="submit"]:active {
+    filter: brightness(90%);
+}

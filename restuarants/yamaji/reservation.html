@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <base href="../../">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="restuarants/yamaji/css/all.css">
+    <link rel="stylesheet" href="restuarants/yamaji/css/reservation.css">
+    <title>Trattoria Roma - הזמנת מקום</title>
+</head>
+<body>
+    <header class="resturantHeader">
+        <figure>
+            <img src="restuarants/yamaji/images/logo.jpg" alt="לוגו" class="logo">
+        </figure>
+        <h1>Trattoria Roma</h1>
+    </header>
+    <main>
+        <form class="reserve" onsubmit="validateForm(); return false;">
+            <h2>הזמן מקום</h2>
+            <div class="formBox">
+                <label for="name">שם מלא: </label>
+                <input type="text" id="name">
+            </div>
+            <div class="formBox">
+                <label for="phone">טלפון: </label>
+                <input type="tel" id="phone">
+            </div>
+            <div class="formBox">
+                <label for="mail">אימייל: </label>
+                <input type="email" id="mail">
+            </div>
+            <div class="formBox">
+                <label for="diners">מספר סועדים: </label>
+                <input type="number" id="diners">
+            </div>
+            <div class="formBox">
+                <label for="date">תאריך: </label>
+                <input type="datetime-local" id="date">
+            </div>
+            <div class="formBox">
+                <label for="notes">הערות: </label>
+                <textarea id="notes" name="notes" rows="2" cols="30"></textarea>
+            </div>
+            <div class="formBoxSubmit">
+                <input type="submit" value="שלח">
+            </div>
+        </form>
+        <section class="backButton">
+            <a href="restuarants/yamaji/restaurant.html" class="btn">חזרה לדף המסעדה</a>
+        </section>
+    </main>
+    <script src="scripts/reservation.js"></script>
+</body>
+</html>

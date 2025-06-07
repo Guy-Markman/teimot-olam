@@ -1,0 +1,29 @@
+.heigher {
+    height: 700px !important;
+}
+
+.resturantDescription {
+    margin: 0 auto 1em auto;
+    width: max-content;
+    text-align: right;
+}
+
+main {
+    margin-bottom: 2em;
+}
+
+.btnLink {
+  display: inline-block;
+  background-color: #2b3d4f;
+  color: white;
+  padding: 0.6em 1.2em;
+  margin: 0.5em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btnLink:hover {
+  background-color: #3c4f63;
+}

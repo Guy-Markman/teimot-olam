@@ -1,0 +1,61 @@
+
+
+/* === קטגוריה (section) === */
+.category {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+
+.titleBox {
+    background-color: #d6a77a;
+    text-align: center;
+    padding: 0.25em 0;
+    margin-bottom: 0.5em;
+}
+
+.dishList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
+  gap: 2rem 5rem;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.dish {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  width: 100%;
+  max-width: 35em;
+  margin: 0 auto;
+  border-radius: 0.5em;
+}
+
+.dishContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.dishImage {
+  height: 135px;
+  width: auto;
+  border-radius: 0.25em;
+}
+
+.dishText {
+  flex: 1;
+  text-align: start;
+}
+
+.dishText h3 {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+  font-size: 1.2em;
+}
+
+.dishText p {
+    margin-bottom: 0.75em;
+}
+
