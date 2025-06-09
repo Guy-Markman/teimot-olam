@@ -152,6 +152,7 @@ body.restaurant-page.burger-theme .reservation-page {
     display: block;
     font-weight: 600;
     margin-bottom: 4px;
+    color: white;
   }
   body.restaurant-page.burger-theme .reservation-page .form-group input,
   body.restaurant-page.burger-theme .reservation-page .form-group textarea {
