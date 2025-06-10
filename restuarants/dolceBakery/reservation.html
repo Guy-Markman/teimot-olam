@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>הזמנת מקום - דולצ’ה בייקרי</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>הזמנת מקום - דולצ'ה בייקרי</title>
+<link rel="stylesheet" href="../../css/global.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/reservation.css" />
 </head>
 <body>
-  <h1>הזמנת מקום</h1>
-  <form>
-    <label>שם מלא: <input type="text" name="name" required></label><br>
-    <label>טלפון: <input type="tel" name="phone" required></label><br>
-    <label>אימייל: <input type="email" name="email"></label><br>
-    <label>מספר סועדים: <input type="number" name="guests"></label><br>
-    <label>תאריך: <input type="date" name="date"></label><br>
-    <label>הערות נוספות: <textarea name="notes"></textarea></label><br>
-    <button type="submit">שלח</button>
-  </form>
+<header class="resturantHeader">
+    <figure>
+        <img src="images/logo.jpg" alt="לוגו" class="logo" />
+    </figure>
+    <h1>מאפיית דולצ'ה</h1>
+</header>
+
+<main class="reserve">
+    <h2>הזמנת מקום</h2>
+    <form>
+        <div class="formBox">
+            <label for="name">שם מלא:</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="formBox">
+            <label for="phone">טלפון:</label>
+            <input type="tel" id="phone" name="phone" required />
+        </div>
+        
+        <div class="formBox">
+            <label for="email">אימייל:</label>
+            <input type="email" id="email" name="email" />
+        </div>
+        
+        <div class="formBox">
+            <label for="guests">מספר סועדים:</label>
+            <input type="number" id="guests" name="guests" min="1" max="20" />
+        </div>
+        
+        <div class="formBox">
+            <label for="date">תאריך:</label>
+            <input type="date" id="date" name="date" />
+        </div>
+        
+        <div class="formBox">
+            <label for="time">שעה:</label>
+            <input type="time" id="time" name="time" />
+        </div>
+        
+        <div class="formBox">
+            <label for="notes">הערות נוספות:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+        
+        <div class="formBoxSubmit">
+            <input type="submit" value="שלח הזמנה" />
+        </div>
+    </form>
+</main>
+<footer>
+  <section class="links">
+            <a href="restaurant.html">חזרה למסעדה</a>
+  </section>
+</footer>
+
+<script src="../../scripts/reservation.js"></script>
 </body>
 </html>

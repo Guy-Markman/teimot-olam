@@ -1,52 +1,103 @@
+/* === Container === */
 .reserve {
     width: 60em;
     max-width: 95%;
-    margin: 0 auto;
+    margin: 2em auto;
     border-style: solid;
     border-radius: 15px;
     border-width: 1px;
-    padding-right: 2em;
+    border-color: #ccc;
+    padding: 2em;
     background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.reserve h2{
-    margin-bottom: 0.6em;
+.reserve h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #6F4E37;
+    font-size: 1.8em;
 }
 
-.formBox{
-    margin-bottom: 0.75em;
+/* === Form Boxes === */
+.formBox {
+    margin-bottom: 1.25em;
 }
 
 .formBox label {
+    display: block;
     font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
 }
 
-.formBox input, .formBoxSubmit input{ 
+.formBox input, 
+.formBox textarea {
+    width: 100%;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    min-height: 2em;    
+    min-height: 2.5em;
+    padding: 0.5em;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
 }
 
+.formBox input:focus,
+.formBox textarea:focus {
+    outline: none;
+    border-color: #d66a00;
+    box-shadow: 0 0 0 2px rgba(214, 106, 0, 0.2);
+}
+
+.formBox textarea {
+    min-height: 6em;
+    resize: vertical;
+}
+
+/* === Submit Button === */
 .formBoxSubmit {
-    margin: 0.75em auto;
+    margin: 2em auto 1em;
+    text-align: center;
 }
 
 .formBoxSubmit input[type="submit"] {
     background-color: #d66a00;
     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     display: block;
     font-size: 1.1em;
     font-weight: bold;
-    margin-bottom: 0.8em;
     margin: 0 auto;
     max-width: 100%;
-    min-height: 2em;
-    width: 30em;
+    min-height: 3em;
+    padding: 0.75em 2em;
+    width: 20em;
+    transition: all 0.3s ease;
 }
 
 .formBoxSubmit input[type="submit"]:hover {
-    filter: brightness(90%);
+    background-color: #c55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(214, 106, 0, 0.3);
 }
 
 .formBoxSubmit input[type="submit"]:active {
-    filter: brightness(90%);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(214, 106, 0, 0.3);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .reserve {
+        padding: 1.5em;
+        margin: 1em auto;
+    }
+    
+    .formBoxSubmit input[type="submit"] {
+        width: 100%;
+        max-width: none;
+    }
 }
