@@ -5,8 +5,8 @@ const users = {
     Rami:  'Rami2025'
   };
   
-  const form      = document.getElementById('login-form');
-  const errorMsg  = document.getElementById('error-message');
+  const form      = document.getElementById('loginForm');
+  const errorMsg  = document.getElementById('errorMsg');
   
   form.addEventListener('submit', function(e) {
     e.preventDefault();
