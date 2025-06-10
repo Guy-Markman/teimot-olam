@@ -11,10 +11,12 @@
 
 .reserve h2{
     margin-bottom: 0.6em;
+    text-align: center;
 }
 
 .formBox{
     margin-bottom: 0.75em;
+    text-align: center;
 }
 
 .formBox label {

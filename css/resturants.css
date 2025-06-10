@@ -30,20 +30,6 @@ body{
     justify-content: center;
 }
 
-.links button {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 0 0 0 0;
-    min-width: 5em;
-    min-height: 3em;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgb(255, 112, 77);
-    font-weight: bold;
-    font-size: 15px;
-}
-
 body {
   font-family: "Segoe UI", Tahoma, Helvetica, Arial, sans-serif;
 }

@@ -2,21 +2,21 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <base href="../../">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="restuarants/trattoriaRoma/css/all.css">
-    <link rel="stylesheet" href="restuarants/trattoriaRoma/css/reservation.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/reservation.css">
     <title>Trattoria Roma - הזמנת מקום</title>
 </head>
 <body>
     <header class="resturantHeader">
         <figure>
-            <img src="imgs/restulogo.jpg" alt="לוגו" class="logo">
+            <img src="images/restulogo.jpg" alt="לוגו" class="logo">
         </figure>
         <h1>Trattoria Roma</h1>
     </header>
     <main>
+        <section>
         <form class="reserve" onsubmit="validateForm(); return false;">
             <h2>הזמן מקום</h2>
             <div class="formBox">
@@ -47,7 +47,12 @@
                 <input type="submit" value="שלח">
             </div>
         </form>
+        </section>
+        <section class="links">
+            <a href="restaurant.html">חזרה למסעדה</a>
+        </section>
+
     </main>
-    <script src="scripts/reservation.js"></script>
+    <script src="../../scripts/reservation.js"></script>
 </body>
 </html>
