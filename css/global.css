@@ -48,6 +48,10 @@ button {
     padding: 0.25em;
     text-decoration: none;
 }
+.links a:hover{
+    filter: brightness(0.8);
+    transform: scale(1.03);
+}
 
 /* ===== Reset בסיסי ===== */
 * {
