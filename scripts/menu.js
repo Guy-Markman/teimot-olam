@@ -1,0 +1,74 @@
+async function getConfig() {
+    try {
+        const response = await fetch('./config.json');
+        if (!response.ok)
+            throw new Error('Failed to load config.json');
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading config:', error);
+        return null;
+    }
+}
+
+async function getMenu(location) {
+    try {
+        const response = await fetch(location);
+        if (!response.ok)
+            throw new Error('Failed to load menu json file');
+
+
+    } catch (error) {
+        console.error('Error loading menu: ', error);
+        return null;
+    }
+    return fetch(location)
+    .then(response =>{
+        if (!response.ok)
+            throw new Error('Failed to load menu json file');
+        return response.json();
+    })
+    .catch(error => {
+        console.error('Error loading menu: ', error);
+    });
+}
+
+async function loadCategory(dishes, container) {
+    const template = document.getElementById("dish-template");
+    console.log(dishes);
+    Object.values(dishes).forEach(dish => {
+        const clone = template.content.cloneNode(true);
+        console.log(dish);
+        clone.querySelector("h3").textContent = dish.name;
+        clone.querySelector(".dishDescription").textContent = dish.description;
+        clone.querySelector(".dishPrice").textContent = dish.price;
+
+        const img = clone.querySelector(".dishImage");
+        img.src = dish.image;
+        img.alt = dish.name;
+
+        container.append(clone);
+        return null;
+    });
+}
+
+async function load() {
+    const config = await getConfig();
+    const menu = await getMenu(config.menuFile);
+    const main = document.getElementsByTagName("main")[0];
+    Object.entries(menu.categories).forEach(([category, items]) => {
+        const catElement = document.createElement("section");
+        main.append(catElement);
+        
+        catElement.classList.add("category");
+        const title = document.createElement("h2");
+        catElement.append(title);
+        title.textContent = category;
+        title.classList.add("titleBox", "titleBoxBakery");
+        
+        const dishList = document.createElement("div");
+        catElement.append(dishList);
+        dishList.classList.add("dishList");
+
+        loadCategory(items, dishList);
+    });
+}
