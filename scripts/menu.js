@@ -34,10 +34,8 @@ async function getMenu(location) {
 
 async function loadCategory(dishes, container) {
     const template = document.getElementById("dish-template");
-    console.log(dishes);
     Object.values(dishes).forEach(dish => {
         const clone = template.content.cloneNode(true);
-        console.log(dish);
         clone.querySelector("h3").textContent = dish.name;
         clone.querySelector(".dishDescription").textContent = dish.description;
         clone.querySelector(".dishPrice").textContent = dish.price;
