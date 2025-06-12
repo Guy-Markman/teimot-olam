@@ -24,18 +24,16 @@
 }
 
 .dish {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+
   background-color: rgba(0, 0, 0, 0.1);
   padding: 1em;
   width: 100%;
   max-width: 35em;
   margin: 0 auto;
   border-radius: 0.5em;
-}
-
-.dishContent {
-  display: flex;
-  align-items: flex-start;
-  gap: 1em;
 }
 
 .dishImage {
