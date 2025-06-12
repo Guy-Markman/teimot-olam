@@ -1,0 +1,91 @@
+{
+  "restaurant": "Trattoria Roma",
+  "categories": {
+    "מנות פתיחה": [
+      {
+        "name": "ברוסקטה עגבניות",
+        "description": "ברוסקטה עם עגבניות טריות ובזיליקום",
+        "price": "₪28",
+        "image": "imgs/bruschetta.jpg"
+      },
+      {
+        "name": "קרפצ'יו סינטה",
+        "description": "פרוסות דקות של סינטה עם שמן זית ולימון",
+        "price": "₪44",
+        "image": "imgs/carpaccio.jpg"
+      },
+      {
+        "name": "סלט קפרזה",
+        "description": "סלט קפרזה עם מוצרלה, עגבניות ובזיליקום",
+        "price": "₪38",
+        "image": "imgs/caprese.jpg"
+      }
+    ],
+    "מנות עיקריות": [
+      {
+        "name": "פסטה טליאטלה ברוטב פטריות כמהין",
+        "description": "פסטה טליאטלה ברוטב פטריות כמהין",
+        "price": "₪64",
+        "image": "imgs/truffle-pasta.jpg"
+      },
+      {
+        "name": "פיצה מרגריטה קלאסית",
+        "description": "פיצה מרגריטה עם גבינת מוצרלה ובזיליקום",
+        "price": "₪56",
+        "image": "imgs/margherita.jpg"
+      },
+      {
+        "name": "עוף צלוי עם פולנטה ורוזמרין",
+        "description": "עוף צלוי בתנור עם פולנטה רכה ורוזמרין",
+        "price": "₪68",
+        "image": "imgs/roast-chicken.jpg"
+      },
+      {
+        "name": "ניוקי עגבניות שרי ומסקרפונה",
+        "description": "ניוקי עם רוטב עגבניות שרי ומסקרפונה",
+        "price": "₪62",
+        "image": "imgs/gnocchi.jpg"
+      }
+    ],
+    "קינוחים": [
+      {
+        "name": "טירמיסו ביתי",
+        "description": "קינוח טירמיסו איטלקי עם קקאו",
+        "price": "₪34",
+        "image": "imgs/tiramisu.jpg"
+      },
+      {
+        "name": "פנקוטה וניל",
+        "description": "פנקוטה וניל עם סירופ פירות יער",
+        "price": "₪32",
+        "image": "imgs/panna-cotta.jpg"
+      },
+      {
+        "name": "סורבה לימון איטלקי",
+        "description": "סורבה לימון איטלקי קפוא ומרענן",
+        "price": "₪28",
+        "image": "imgs/lemon-sorbet.jpg"
+      }
+    ],
+    "יין הבית": [
+      {
+        "name": "יין אדום קיאנטי DOCG",
+        "description": "כוס יין אדום איטלקי מסוג קיאנטי",
+        "price": "₪28",
+        "image": "imgs/chianti.jpg"
+      },
+      {
+        "name": "יין לבן פינו גריג'יו",
+        "description": "כוס יין לבן מסוג פינו גריג'יו",
+        "price": "₪28",
+        "image": "imgs/pinot-grigio.jpg"
+      },
+      {
+        "name": "פרוסקו איטלקי",
+        "description": "כוס פרוסקו איטלקי מבעבע קר",
+        "price": "₪32",
+        "image": "imgs/prosecco.jpg"
+      }
+    ]
+  }
+}

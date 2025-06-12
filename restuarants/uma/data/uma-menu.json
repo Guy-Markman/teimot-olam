@@ -1,0 +1,79 @@
+{
+  "restaurant": "UMA",
+  "categories": {
+    "מנות ראשונות": [
+      {
+        "name": "אדממה",
+        "description": "פולי סויה טריים במלח ים גס",
+        "price": "₪25",
+        "image": "imgs/edamame.jpg"
+      },
+      {
+        "name": "גיוזה קראנצ׳י",
+        "description": "כיסוני בצק ממולאים בשר חזיר וירקות, מטוגנים זהובים",
+        "price": "₪38",
+        "image": "imgs/gyoza.jpg"
+      },
+      {
+        "name": "מרק מיסו",
+        "description": "מרק אצות עם טופו ובצל ירוק, בייס שכבות עמוק של טעם",
+        "price": "₪18",
+        "image": "imgs/miso_soup.jpg"
+      }
+    ],
+    "מנות עיקריות": [
+      {
+        "name": "סשן ניגירי מיוחד",
+        "description": "10 יחידות ניגירי פרימיום עם דג טונה, סלמון וקארפצ׳יו לבן",
+        "price": "₪110",
+        "image": "imgs/nigiri_set.jpg"
+      },
+      {
+        "name": "אוּראמאקי סלמון קריספי",
+        "description": "רול פנימי עם סלמון, קראנץ׳ בטמפורה, קליפה חיצונית של אורז ואצות",
+        "price": "₪75",
+        "image": "imgs/uramaki.jpg"
+      },
+      {
+        "name": "צלחת סשימי",
+        "description": "15 פרוסות סשימי במבחר דגים טריים (טונה, סולמון, דניס)",
+        "price": "₪125",
+        "image": "imgs/sashimi_plate.jpg"
+      }
+    ],
+    "קינוחים": [
+      {
+        "name": "מוצ׳י גלידה",
+        "description": "3 כדורי בצק אורז ממולאים בגלידת פיסטוק, וניל ושוקו",
+        "price": "₪30",
+        "image": "imgs/mochi.jpg"
+      },
+      {
+        "name": "גלידת תה ירוק",
+        "description": "קרם עשיר בטעם מאצ׳ה יפני אותנטי",
+        "price": "₪28",
+        "image": "imgs/green_tea_icecream.jpg"
+      }
+    ],
+    "שתייה": [
+      {
+        "name": "סקה חם",
+        "description": "200 מ״ל של סקה איכותי חם, מתאים לערב קריר",
+        "price": "₪45",
+        "image": "imgs/sake.jpg"
+      },
+      {
+        "name": "תה ירוק קר",
+        "description": "כוס תה ירוק בטמפרטורת חדר, מרענן וקליל",
+        "price": "₪18",
+        "image": "imgs/green_tea.jpg"
+      },
+      {
+        "name": "בירה יפנית (Asahi)",
+        "description": "330 מ״ל בירה קרה, יפנית קלאסית",
+        "price": "₪32",
+        "image": "imgs/japanese_beer.jpg"
+      }
+    ]
+  }
+}

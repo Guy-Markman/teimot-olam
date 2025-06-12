@@ -1,0 +1,97 @@
+{
+  "restaurant": "מאפיית דולצ'ה",
+  "categories": {
+    "מאפי בוקר": [
+      {
+        "name": "קרואסון חמאה צרפתי",
+        "description": "קרואסון חמאה חם ופריך, אפוי טרי כל בוקר",
+        "price": "₪12",
+        "image": "images/croissant.jpg"
+      },
+      {
+        "name": "קרואסון שקדים",
+        "description": "קרואסון במילוי קרם שקדים עדין וקצוץ שקדים",
+        "price": "₪16",
+        "image": "images/almond-croissant.jpg"
+      },
+      {
+        "name": "מאפה שמרים קינמון",
+        "description": "מאפה שמרים רך במילוי קינמון וסוכר חום",
+        "price": "₪14",
+        "image": "images/cinnamon-roll.jpg"
+      },
+      {
+        "name": "דניש שוקולד",
+        "description": "מאפה דניש עם קרם שוקולד בלגי ושבבי שוקולד",
+        "price": "₪18",
+        "image": "images/chocolate-danish.jpg"
+      }
+    ],
+    "עוגות אישיות": [
+      {
+        "name": "אקלר וניל קלאסי",
+        "description": "אקלר במילוי קרם וניל צרפתי וציפוי שוקולד",
+        "price": "₪22",
+        "image": "images/eclair.jpg"
+      },
+      {
+        "name": "טארט לימון",
+        "description": "טארט פריכה עם קרם לימון חמצמץ ומרנג קליל",
+        "price": "₪26",
+        "image": "images/lemon-tart.jpg"
+      },
+      {
+        "name": "מיל פיי תותים",
+        "description": "עוגת מיל פיי עם קרם פטיסייר ותותים טריים",
+        "price": "₪28",
+        "image": "images/mille-feuille.jpg"
+      },
+      {
+        "name": "מקרון פיסטוק",
+        "description": "מקרון צרפתי עדין בטעם פיסטוק עם גנאש לבן",
+        "price": "₪8",
+        "image": "images/macaron.jpg"
+      }
+    ],
+    "לחמים ביתיים": [
+      {
+        "name": "לחם מחמצת",
+        "description": "לחם מחמצת פריך וארומטי, אפוי כל בוקר",
+        "price": "₪24",
+        "image": "images/sourdough.jpg"
+      },
+      {
+        "name": "חלה בריוש",
+        "description": "חלה עשירה וריכה בסגנון בריוש צרפתי",
+        "price": "₪32",
+        "image": "images/brioche-challah.jpg"
+      },
+      {
+        "name": "באגט צרפתי",
+        "description": "באגט קלאסי עם קרום פריך ופנים אוורירי",
+        "price": "₪18",
+        "image": "images/baguette.jpg"
+      }
+    ],
+    "משקאות חמים": [
+      {
+        "name": "קפה הפוך",
+        "description": "קפה איכותי עם חלב מוקצף ופרווה משיית",
+        "price": "₪14",
+        "image": "images/cappuccino.jpg"
+      },
+      {
+        "name": "לאטה וניל",
+        "description": "אספרסו עם חלב חם וסירופ וניל טבעי",
+        "price": "₪16",
+        "image": "images/vanilla-latte.jpg"
+      },
+      {
+        "name": "שוקולד חם צרפתי",
+        "description": "שוקולד חם עשיר עם שוקולד בלגי אמיתי",
+        "price": "₪18",
+        "image": "images/hot-chocolate.jpg"
+      }
+    ]
+  }
+}

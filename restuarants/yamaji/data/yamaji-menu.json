@@ -1,0 +1,109 @@
+{
+  "restaurant": "Yamaji",
+  "categories": {
+    "מנות ראמן": [
+      {
+        "name": "Miso Beef",
+        "description": "ציר עוף עשיר, טארה מיסו פיקנטי, אטריות עבודת יד, בקר, נבטים, ביצה רכה",
+        "price": "₪82",
+        "image": "restuarants/yamaji/images/miso-beef.jpg"
+      },
+      {
+        "name": "Hot Kimchi Chicken",
+        "description": "ראמן עוף פיקנטי עם טארה קימצ'י, עוף צלוי, נבטים, קימצ'י, ביצה רכה",
+        "price": "₪76",
+        "image": "restuarants/yamaji/images/kimchi-chicken.jpg"
+      },
+      {
+        "name": "Soy Chicken",
+        "description": "ראמן סויה יפני עם עוף צלוי, טארה סויה מתוקה, בוק צ'וי, נבטים",
+        "price": "₪72",
+        "image": "restuarants/yamaji/images/soy-chicken.jpg"
+      },
+      {
+        "name": "Vegan Mushroom",
+        "description": "ציר פטריות, מיסו כהה, שיטאקה, תירס, טופו צרוב, בצל ירוק",
+        "price": "₪68",
+        "image": "restuarants/yamaji/images/vegan-mushroom.jpg"
+      }
+    ],
+    "מנות צד": [
+      {
+        "name": "Spicy Cucumber",
+        "description": "חסה מיזו, שומשום קלוי, בצל סגול, צ'ילי קראנצ'י",
+        "price": "₪28",
+        "image": "restuarants/yamaji/images/spicy-cucumber.jpg"
+      },
+      {
+        "name": "Chicken Gyoza",
+        "description": "4 כיסונים מטוגנים במילוי עוף, שום וג'ינג'ר",
+        "price": "₪36",
+        "image": "restuarants/yamaji/images/gyoza.jpg"
+      },
+      {
+        "name": "Hot Kimchi",
+        "description": "קימצ'י קוריאני מותסס, חריף ומרענן",
+        "price": "₪24",
+        "image": "restuarants/yamaji/images/kimchi.jpg"
+      },
+      {
+        "name": "Edamame",
+        "description": "פולי סויה מאודים עם מלח גס יפני",
+        "price": "₪22",
+        "image": "restuarants/yamaji/images/edamame.jpg"
+      }
+    ],
+    "קינוחים": [
+      {
+        "name": "מוצ'י (2 יח')",
+        "description": "מילוי מנגו / שוקולד / פיסטוק",
+        "price": "₪22",
+        "image": "restuarants/yamaji/images/mochi.jpg"
+      },
+      {
+        "name": "דאוריאקי",
+        "description": "פנקייק יפני ממולא בקרם שעועית אדומה",
+        "price": "₪26",
+        "image": "restuarants/yamaji/images/dorayaki.jpg"
+      },
+      {
+        "name": "גלידת מאצ'ה",
+        "description": "תה ירוק יפני, מוגשת עם שומשום שחור",
+        "price": "₪18",
+        "image": "restuarants/yamaji/images/matcha-icecream.jpg"
+      }
+    ],
+    "שתייה": [
+      {
+        "name": "קוקה קולה / זירו / ספרייט",
+        "description": "משקאות מוגזים קלאסיים",
+        "price": "₪10",
+        "image": "restuarants/yamaji/images/soda.png"
+      },
+      {
+        "name": "סודה בטעם יוזו",
+        "description": "משקה מרענן עם טעם הדר יפני",
+        "price": "₪14",
+        "image": "restuarants/yamaji/images/yuzu-soda.jpg"
+      },
+      {
+        "name": "בירה יפנית (סאפפורו / קירין)",
+        "description": "בקבוק אישי של בירה יפנית מקורית",
+        "price": "₪26",
+        "image": "restuarants/yamaji/images/japanese-beer.jpg"
+      },
+      {
+        "name": "תה ירוק קר",
+        "description": "תה יפני מרענן ללא סוכר",
+        "price": "₪12",
+        "image": "restuarants/yamaji/images/green-tea.jpg"
+      },
+      {
+        "name": "סאקה חם / קר",
+        "description": "משקה אורז יפני מסורתי (150 מ\"ל)",
+        "price": "₪28",
+        "image": "restuarants/yamaji/images/sake.jpg"
+      }
+    ]
+  }
+}
