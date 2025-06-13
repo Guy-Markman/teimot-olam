@@ -1,200 +1,65 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../../css/global.css" />
-        <link rel="stylesheet" href="../../css/menus.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/menuRest.css" />
-        <title>מאפיית דולצ'ה - תפריט</title>
-    </head>
-    <body>
-        <header class="resturantHeader">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/menus.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/menuRest.css" />
+    <title>מאפיית דולצ'ה - תפריט</title>
+</head>
+<body>
+    <template id="dish-template">
+        <article class="dish">
+            <div class="dishText">
+                <h3></h3>
+                <p class="dishDescription"></p>
+                <p class="dishPrice"></p>
+                <button class="addButton">הוסף לתפריט</button>
+            </div>
             <figure>
-                <img src="images/logo.jpg" alt="לוגו" class="logo" />
+                <img class="dishImage" alt="" />
             </figure>
-            <h1>מאפיית דולצ'ה</h1>
-        </header>
+        </article>
+    </template>
 
-        <main>
-            <section class="category">
-                <h2 class="titleBox titleBoxBakery">מאפי בוקר</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>קרואסון חמאה צרפתי</h3>
-                            <p class="dishDescription">קרואסון חמאה חם ופריך, אפוי טרי כל בוקר</p>
-                            <p class="dishPrice">₪12</p>
-                        </div>
-                        <figure>
-                            <img src="images/croissant.jpg" alt="קרואסון חמאה צרפתי" class="dishImage" />
-                        </figure>
-                    </article>
+    <template id="cart-item-template">
+        <li>
+            <span class="itemTitle"></span>
+            <span class="itemPrice"></span>
+            <button class="removeButton">x</button>
+        </li>
+    </template>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>קרואסון שקדים</h3>
-                            <p class="dishDescription">קרואסון במילוי קרם שקדים עדין וקצוץ שקדים</p>
-                            <p class="dishPrice">₪16</p>
-                        </div>
-                        <figure>
-                            <img src="images/almond-croissant.jpg" alt="קרואסון שקדים" class="dishImage" />
-                        </figure>
-                    </article>
+    <header class="resturantHeader">
+        <figure>
+            <img src="images/logo.jpg" alt="לוגו" class="logo" />
+        </figure>
+        <h1>מאפיית דולצ'ה</h1>
+    </header>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>מאפה שמרים קינמון</h3>
-                            <p class="dishDescription">מאפה שמרים רך במילוי קינמון וסוכר חום</p>
-                            <p class="dishPrice">₪14</p>
-                        </div>
-                        <figure>
-                            <img src="images/cinnamon-roll.jpg" alt="מאפה שמרים קינמון" class="dishImage" />
-                        </figure>
-                    </article>
+    <main></main>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>דניש שוקולד</h3>
-                            <p class="dishDescription">מאפה דניש עם קרם שוקולד בלגי ושבבי שוקולד</p>
-                            <p class="dishPrice">₪18</p>
-                        </div>
-                        <figure>
-                            <img src="images/chocolate-danish.jpg" alt="דניש שוקולד" class="dishImage" />
-                        </figure>
-                    </article>
-                </div>
-            </section>
+    <aside id="cartWin" class="cartWin">
+        <h4>סל קניות 🛒</h4>
+        <ul class="cart" id="cartList"></ul>
+        <span class="total">סך הכל:</span>
+        <span id="total" class="total">0</span>
+        <span class="total">₪</span>
+        <button onclick="clearCart()">רוקן סל</button>
+    </aside>
 
-            <section class="category">
-                <h2 class="titleBox titleBoxBakery">עוגות אישיות</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>אקלר וניל קלאסי</h3>
-                            <p class="dishDescription">אקלר במילוי קרם וניל צרפתי וציפוי שוקולד</p>
-                            <p class="dishPrice">₪22</p>
-                        </div>
-                        <figure>
-                            <img src="images/eclair.jpg" alt="אקלר וניל קלאסי" class="dishImage" />
-                        </figure>
-                    </article>
+    <footer>
+        <section class="links">
+            <a href="restaurant.html">חזרה למאפייה</a>
+        </section>
+    </footer>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>טארט לימון</h3>
-                            <p class="dishDescription">טארט פריכה עם קרם לימון חמצמץ ומרנג קליל</p>
-                            <p class="dishPrice">₪26</p>
-                        </div>
-                        <figure>
-                            <img src="images/lemon-tart.jpg" alt="טארט לימון" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>מיל פיי תותים</h3>
-                            <p class="dishDescription">עוגת מיל פיי עם קרם פטיסייר ותותים טריים</p>
-                            <p class="dishPrice">₪28</p>
-                        </div>
-                        <figure>
-                            <img src="images/mille-feuille.jpg" alt="מיל פיי תותים" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>מקרון פיסטוק</h3>
-                            <p class="dishDescription">מקרון צרפתי עדין בטעם פיסטוק עם גנאש לבן</p>
-                            <p class="dishPrice">₪8</p>
-                        </div>
-                        <figure>
-                            <img src="images/macaron.jpg" alt="מקרון פיסטוק" class="dishImage" />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <section class="category">
-                <h2 class="titleBox titleBoxBakery">לחמים ביתיים</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>לחם מחמצת</h3>
-                            <p class="dishDescription">לחם מחמצת פריך וארומטי, אפוי כל בוקר</p>
-                            <p class="dishPrice">₪24</p>
-                        </div>
-                        <figure>
-                            <img src="images/sourdough.jpg" alt="לחם מחמצת" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>חלה בריוש</h3>
-                            <p class="dishDescription">חלה עשירה וריכה בסגנון בריוש צרפתי</p>
-                            <p class="dishPrice">₪32</p>
-                        </div>
-                        <figure>
-                            <img src="images/brioche-challah.jpg" alt="חלה בריוש" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>באגט צרפתי</h3>
-                            <p class="dishDescription">באגט קלאסי עם קרום פריך ופנים אוורירי</p>
-                            <p class="dishPrice">₪18</p>
-                        </div>
-                        <figure>
-                            <img src="images/baguette.jpg" alt="באגט צרפתי" class="dishImage" />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <section class="category">
-                <h2 class="titleBox titleBoxBakery">משקאות חמים</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>קפה הפוך</h3>
-                            <p class="dishDescription">קפה איכותי עם חלב מוקצף ופרווה משיית</p>
-                            <p class="dishPrice">₪14</p>
-                        </div>
-                        <figure>
-                            <img src="images/cappuccino.jpg" alt="קפה הפוך" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>לאטה וניל</h3>
-                            <p class="dishDescription">אספרסו עם חלב חם וסירופ וניל טבעי</p>
-                            <p class="dishPrice">₪16</p>
-                        </div>
-                        <figure>
-                            <img src="images/vanilla-latte.jpg" alt="לאטה וניל" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>שוקולד חם צרפתי</h3>
-                            <p class="dishDescription">שוקולד חם עשיר עם שוקולד בלגי אמיתי</p>
-                            <p class="dishPrice">₪18</p>
-                        </div>
-                        <figure>
-                            <img src="images/hot-chocolate.jpg" alt="שוקולד חם צרפתי" class="dishImage" />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <nav class="links">
-                <a href="restaurant.html">חזרה למאפייה</a>
-            </nav>
-        </main>
-    </body>
+    <script src="../../scripts/menu.js"></script>
+    <script src="../../scripts/cart.js"></script>
+    <script>
+        init();
+    </script>
+</body>
 </html>

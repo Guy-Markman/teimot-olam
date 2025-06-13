@@ -1,4 +1,5 @@
 {
     "menuFile": "data/dolce-menu.json",
-    "menuTheme": "boxes"
+    "menuTheme": "boxes",
+    "name": "dolce-menu"
 }

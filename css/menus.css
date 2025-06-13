@@ -72,7 +72,7 @@
 }
 
 .addButton:hover {
-  background-color: #86411f;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
 

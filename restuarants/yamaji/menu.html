@@ -1,283 +1,65 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <base href="../../" />
-        <link rel="stylesheet" href="css/global.css" />
-        <link rel="stylesheet" href="css/menus.css" />
-        <link rel="stylesheet" href="restuarants/yamaji/css/all.css" />
-        <link rel="stylesheet" href="restuarants/yamaji/css/menuRest.css" />
-        <title>Yamaji - תפריט</title>
-    </head>
-    <body>
-        <header class="resturantHeader">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/menus.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/menuRest.css" />
+    <title>Yamaji - תפריט</title>
+</head>
+<body>
+    <template id="dish-template">
+        <article class="dish">
+            <div class="dishText">
+                <h3></h3>
+                <p class="dishDescription"></p>
+                <p class="dishPrice"></p>
+                <button class="addButton yamajiStyle">הוסף לתפריט</button>
+            </div>
             <figure>
-                <img src="restuarants/yamaji/images/logo.jpg" alt="לוגו" class="logo" />
+                <img class="dishImage" alt="" />
             </figure>
-            <h1>Yamaji</h1>
-        </header>
+        </article>
+    </template>
 
-        <main>
-            <!-- מנות ראמן -->
-            <section class="category">
-                <h2 class="titleBox">מנות ראמן</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Miso Beef</h3>
-                            <p class="dishDescription">
-                                ציר עוף עשיר, טארה מיסו פיקנטי, אטריות עבודת יד, בקר, נבטים, ביצה רכה
-                            </p>
-                            <p class="dishPrice">₪82</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/miso-beef.jpg"
-                                alt="ראמן מיסו עם בקר"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
+    <template id="cart-item-template">
+        <li>
+            <span class="itemTitle"></span>
+            <span class="itemPrice"></span>
+            <button class="removeButton">x</button>
+        </li>
+    </template>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Hot Kimchi Chicken</h3>
-                            <p class="dishDescription">
-                                ראמן עוף פיקנטי עם טארה קימצ'י, עוף צלוי, נבטים, קימצ'י, ביצה רכה
-                            </p>
-                            <p class="dishPrice">₪76</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/kimchi-chicken.jpg"
-                                alt="ראמן עוף חריף עם קימצ'י"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
+    <header class="resturantHeader">
+        <figure>
+            <img src="images/logo.jpg" alt="לוגו" class="logo" />
+        </figure>
+        <h1>Yamaji</h1>
+    </header>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Soy Chicken</h3>
-                            <p class="dishDescription">ראמן סויה יפני עם עוף צלוי, טארה סויה מתוקה, בוק צ'וי, נבטים</p>
-                            <p class="dishPrice">₪72</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/soy-chicken.jpg"
-                                alt="ראמן סויה עם עוף"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
+    <main></main>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Vegan Mushroom</h3>
-                            <p class="dishDescription">ציר פטריות, מיסו כהה, שיטאקה, תירס, טופו צרוב, בצל ירוק</p>
-                            <p class="dishPrice">₪68</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/vegan-mushroom.jpg"
-                                alt="ראמן טבעוני עם פטריות וטופו"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-                </div>
-            </section>
+    <aside id="cartWin" class="cartWin yamajiStyle  ">
+        <h4>סל קניות 🛒</h4>
+        <ul class="cart" id="cartList"></ul>
+        <span class="total">סך הכל:</span>
+        <span id="total" class="total">0</span>
+        <span class="total">₪</span>
+        <button onclick="clearCart()">רוקן סל</button>
+    </aside>
 
-            <!-- מנות צד -->
-            <section class="category">
-                <h2 class="titleBox">מנות צד</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Spicy Cucumber</h3>
-                            <p class="dishDescription">חסה מיזו, שומשום קלוי, בצל סגול, צ'ילי קראנצ'י</p>
-                            <p class="dishPrice">₪28</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/spicy-cucumber.jpg"
-                                alt="סלט מלפפונים פיקנטי יפני"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
+    <footer>
+        <section class="links">
+            <a href="restaurant.html">חזרה לדף המסעדה</a>
+        </section>
+    </footer>
 
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Chicken Gyoza</h3>
-                            <p class="dishDescription">4 כיסונים מטוגנים במילוי עוף, שום וג'ינג'ר</p>
-                            <p class="dishPrice">₪36</p>
-                        </div>
-                        <figure>
-                            <img src="restuarants/yamaji/images/gyoza.jpg" alt="גיוזה עוף מטוגנת" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Hot Kimchi</h3>
-                            <p class="dishDescription">קימצ'י קוריאני מותסס, חריף ומרענן</p>
-                            <p class="dishPrice">₪24</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/kimchi.jpg"
-                                alt="קימצ'י קוריאני חריף"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>Edamame</h3>
-                            <p class="dishDescription">פולי סויה מאודים עם מלח גס יפני</p>
-                            <p class="dishPrice">₪22</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/edamame.jpg"
-                                alt="אדממה מאודה עם מלח ים"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <!-- קינוחים -->
-            <section class="category">
-                <h2 class="titleBox">קינוחים</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>מוצ'י (2 יח')</h3>
-                            <p class="dishDescription">מילוי מנגו / שוקולד / פיסטוק</p>
-                            <p class="dishPrice">₪22</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/mochi.jpg"
-                                alt="כדורי מוצ'י בטעמים שונים"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>דאוריאקי</h3>
-                            <p class="dishDescription">פנקייק יפני ממולא בקרם שעועית אדומה</p>
-                            <p class="dishPrice">₪26</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/dorayaki.jpg"
-                                alt="דאוריאקי – פנקייק יפני מתוק"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>גלידת מאצ'ה</h3>
-                            <p class="dishDescription">תה ירוק יפני, מוגשת עם שומשום שחור</p>
-                            <p class="dishPrice">₪18</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/matcha-icecream.jpg"
-                                alt="גלידת תה ירוק יפנית"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <!-- שתייה -->
-            <section class="category">
-                <h2 class="titleBox">שתייה</h2>
-                <div class="dishList">
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>קוקה קולה / זירו / ספרייט</h3>
-                            <p class="dishDescription">משקאות מוגזים קלאסיים</p>
-                            <p class="dishPrice">₪10</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/soda.png"
-                                alt="פחיות קולה, זירו וספרייט"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>סודה בטעם יוזו</h3>
-                            <p class="dishDescription">משקה מרענן עם טעם הדר יפני</p>
-                            <p class="dishPrice">₪14</p>
-                        </div>
-                        <figure>
-                            <img src="restuarants/yamaji/images/yuzu-soda.jpg" alt="סודה בטעם יוזו" class="dishImage" />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>בירה יפנית (סאפפורו / קירין)</h3>
-                            <p class="dishDescription">בקבוק אישי של בירה יפנית מקורית</p>
-                            <p class="dishPrice">₪26</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/japanese-beer.jpg"
-                                alt="בקבוקי בירה יפנית"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>תה ירוק קר</h3>
-                            <p class="dishDescription">תה יפני מרענן ללא סוכר</p>
-                            <p class="dishPrice">₪12</p>
-                        </div>
-                        <figure>
-                            <img
-                                src="restuarants/yamaji/images/green-tea.jpg"
-                                alt="תה ירוק יפני קר"
-                                class="dishImage"
-                            />
-                        </figure>
-                    </article>
-
-                    <article class="dish">
-                        <div class="dishText">
-                            <h3>סאקה חם / קר</h3>
-                            <p class="dishDescription">משקה אורז יפני מסורתי (150 מ"ל)</p>
-                            <p class="dishPrice">₪28</p>
-                        </div>
-                        <figure>
-                            <img src="restuarants/yamaji/images/sake.jpg" alt="סאקה יפני חם או קר" class="dishImage" />
-                        </figure>
-                    </article>
-                </div>
-            </section>
-
-            <nav class="backButton">
-                <a href="restuarants/yamaji/restaurant.html" class="btn">חזרה לדף המסעדה</a>
-            </nav>
-        </main>
-    </body>
+    <script src="../../scripts/menu.js"></script>
+    <script src="../../scripts/cart.js"></script>
+    <script>
+        init();
+    </script>
+</body>
 </html>
