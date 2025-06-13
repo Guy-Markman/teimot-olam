@@ -1,189 +1,60 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="../../css/menus.css">
-  <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/menuRest.css">
-  <title>Trattoria Roma - תפריט</title>
-</head>
-<body>
-  <header class="resturantHeader">
-    <figure>
-      <img src="imgs/restulogo.jpg" alt="לוגו" class="logo">
-    </figure>
-    <h1>Trattoria Roma</h1>
-  </header>
-
-  <main>
-    <section class="category">
-      <h2 class="titleBox">מנות פתיחה</h2>
-      <div class="dishList">
-        <article class="dish">
-          <div class="dishText">
-            <h3>ברוסקטה עגבניות</h3>
-            <p class="dishDescription">ברוסקטה עם עגבניות טריות ובזיליקום</p>
-            <p class="dishPrice">₪28</p>
-          </div>
-          <figure>
-            <img src="imgs/bruschetta.jpg" alt="ברוסקטה עם עגבניות טריות ובזיליקום" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>קרפצ'יו סינטה</h3>
-            <p class="dishDescription">פרוסות דקות של סינטה עם שמן זית ולימון</p>
-            <p class="dishPrice">₪44</p>
-          </div>
-          <figure>
-            <img src="imgs/carpaccio.jpg" alt="פרוסות דקות של סינטה עם שמן זית ולימון" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>סלט קפרזה</h3>
-            <p class="dishDescription">סלט קפרזה עם מוצרלה, עגבניות ובזיליקום</p>
-            <p class="dishPrice">₪38</p>
-          </div>
-          <figure>
-            <img src="imgs/caprese.jpg" alt="סלט קפרזה עם מוצרלה, עגבניות ובזיליקום" class="dishImage">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <section class="category">
-      <h2 class="titleBox">מנות עיקריות</h2>
-      <div class="dishList">
-        <article class="dish">
-          <div class="dishText">
-            <h3>פסטה טליאטלה ברוטב פטריות כמהין</h3>
-            <p class="dishDescription">פסטה טליאטלה ברוטב פטריות כמהין</p>
-            <p class="dishPrice">₪64</p>
-          </div>
-          <figure>
-            <img src="imgs/truffle-pasta.jpg" alt="פסטה טליאטלה ברוטב פטריות כמהין" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>פיצה מרגריטה קלאסית</h3>
-            <p class="dishDescription">פיצה מרגריטה עם גבינת מוצרלה ובזיליקום</p>
-            <p class="dishPrice">₪56</p>
-          </div>
-          <figure>
-            <img src="imgs/margherita.jpg" alt="פיצה מרגריטה עם גבינת מוצרלה ובזיליקום" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>עוף צלוי עם פולנטה ורוזמרין</h3>
-            <p class="dishDescription">עוף צלוי בתנור עם פולנטה רכה ורוזמרין</p>
-            <p class="dishPrice">₪68</p>
-          </div>
-          <figure>
-            <img src="imgs/roast-chicken.jpg" alt="עוף צלוי בתנור עם פולנטה רכה ורוזמרין" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>ניוקי עגבניות שרי ומסקרפונה</h3>
-            <p class="dishDescription">ניוקי עם רוטב עגבניות שרי ומסקרפונה</p>
-            <p class="dishPrice">₪62</p>
-          </div>
-          <figure>
-            <img src="imgs/gnocchi.jpg" alt="ניוקי עם רוטב עגבניות שרי ומסקרפונה" class="dishImage">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <section class="category">
-      <h2 class="titleBox">קינוחים</h2>
-      <div class="dishList">
-        <article class="dish">
-          <div class="dishText">
-            <h3>טירמיסו ביתי</h3>
-            <p class="dishDescription">קינוח טירמיסו איטלקי עם קקאו</p>
-            <p class="dishPrice">₪34</p>
-          </div>
-          <figure>
-            <img src="imgs/tiramisu.jpg" alt="קינוח טירמיסו איטלקי עם קקאו" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>פנקוטה וניל</h3>
-            <p class="dishDescription">פנקוטה וניל עם סירופ פירות יער</p>
-            <p class="dishPrice">₪32</p>
-          </div>
-          <figure>
-            <img src="imgs/panna-cotta.jpg" alt="פנה קוטה וניל עם סירופ פירות יער" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>סורבה לימון איטלקי</h3>
-            <p class="dishDescription">סורבה לימון איטלקי קפוא ומרענן</p>
-            <p class="dishPrice">₪28</p>
-          </div>
-          <figure>
-            <img src="imgs/lemon-sorbet.jpg" alt="סורבה לימון איטלקי קפוא ומרענן" class="dishImage">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <section class="category">
-      <h2 class="titleBox">יין הבית</h2>
-      <div class="dishList">
-        <article class="dish">
-          <div class="dishText">
-            <h3>יין אדום קיאנטי DOCG</h3>
-            <p class="dishDescription">כוס יין אדום איטלקי מסוג קיאנטי</p>
-            <p class="dishPrice">₪28</p>
-          </div>
-          <figure>
-            <img src="imgs/chianti.jpg" alt="כוס יין אדום איטלקי מסוג קיאנטי" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>יין לבן פינו גריג'יו</h3>
-            <p class="dishDescription">כוס יין לבן מסוג פינו גריג'יו</p>
-            <p class="dishPrice">₪28</p>
-          </div>
-          <figure>
-            <img src="imgs/pinot-grigio.jpg" alt="כוס יין לבן מסוג פינו גריג'יו" class="dishImage">
-          </figure>
-        </article>
-
-        <article class="dish">
-          <div class="dishText">
-            <h3>פרוסקו איטלקי</h3>
-            <p class="dishDescription">כוס פרוסקו איטלקי מבעבע קר</p>
-            <p class="dishPrice">₪32</p>
-          </div>
-          <figure>
-            <img src="imgs/prosecco.jpg" alt="כוס פרוסקו איטלקי מבעבע קר" class="dishImage">
-          </figure>
-        </article>
-      </div>
-    </section>
-
-    <nav class="links">
-      <a href="restaurant.html">חזרה למסעדה</a>
-    </nav>
-  </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/menus.css" />
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="stylesheet" href="css/menuRest.css" />
+        <title>Trattoria Roma - תפריט</title>
+    </head>
+    <body>
+        <template id="dish-template">
+            <article class="dish">
+                <div class="dishText">
+                    <h3></h3>
+                    <p class="dishDescription"></p>
+                    <p class="dishPrice"></p>
+                    <button class="addButton">הוסף לתפריט</button>
+                </div>
+                <figure>
+                    <img class="dishImage" alt="" />
+                </figure>
+            </article>
+        </template>
+        <template id="cart-item-template">
+            <li>
+                <span class="itemTitle"></span>
+                <span class="itemPrice"></span>
+                <button class="removeButton">x</button>
+            </li>
+        </template>
+        <header class="resturantHeader">
+            <figure>
+                <img src="imgs/restulogo.jpg" alt="לוגו" class="logo" />
+            </figure>
+            <h1>Trattoria Roma</h1>
+        </header>
+        <main></main>
+        <aside id="cartWin" class="cartWin">
+            <h4>סל קניות🛒</h4>
+            <ul class="cart">
+                <li id="cartList">
+                </li>
+            </ul>
+            <span class="total">סך הכל:</span><span id="total" class="total">0</span><span class="total">₪</span>
+            <button onclick="clearCart()">רוקן סל</button>
+        </aside>
+        <footer>
+            <section class="links">
+                <a href="restaurant.html">חזרה לדף המסעדה</a>
+            </section>
+        </footer>
+    </body>
+    <script src="../../scripts/menu.js"></script>
+    <script src="../../scripts/cart.js"></script>
+    <script>
+        init();
+    </script>
 </html>

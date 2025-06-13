@@ -1,9 +1,14 @@
+window.appConfig = null;
+
+
 async function getConfig() {
     try {
         const response = await fetch('./config.json');
         if (!response.ok)
             throw new Error('Failed to load config.json');
-        return await response.json();
+        config = await response.json();
+        window.appConfig = config;
+        return config;
     } catch (error) {
         console.error('Error loading config:', error);
         return null;
@@ -15,8 +20,6 @@ async function getMenu(location) {
         const response = await fetch(location);
         if (!response.ok)
             throw new Error('Failed to load menu json file');
-
-
     } catch (error) {
         console.error('Error loading menu: ', error);
         return null;
@@ -44,6 +47,8 @@ async function loadCategory(dishes, container) {
         img.src = dish.image;
         img.alt = dish.name;
 
+        clone.querySelector(".addButton").onclick = function() {addItem(dish.name, dish.price)};
+
         container.append(clone);
         return null;
     });
@@ -51,6 +56,7 @@ async function loadCategory(dishes, container) {
 
 async function load() {
     const config = await getConfig();
+    window.appConfig = config;
     const menu = await getMenu(config.menuFile);
     const main = document.getElementsByTagName("main")[0];
     Object.entries(menu.categories).forEach(([category, items]) => {
@@ -69,4 +75,10 @@ async function load() {
 
         loadCategory(items, dishList);
     });
+}
+
+async function init() {
+    await load();
+    const id = getRestaurantId();
+    loadCart(id);
 }

@@ -57,3 +57,69 @@
     margin-bottom: 0.75em;
 }
 
+.addButton {
+  background-color: #a0522d; /* chocolate brown */
+  color: white;
+  font-size: 1em;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 8px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.addButton:hover {
+  background-color: #86411f;
+  transform: scale(1.05);
+}
+
+.addButton:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cartWin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 180px;
+  width: 10%;
+  background-color: #86411f;
+  height: 100%;
+  color: white;
+  padding: 10px 10px;
+}
+
+.cart  {
+  list-style-type: none;
+  color: white;
+  margin-right: 5px;
+}
+
+.cart li {
+  display: flex;
+  gap: 20px;
+}
+
+.removeButton {
+  min-width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+
+}
+
+.cartWin h4{
+  color: white;
+}
+
+.total {
+  color: white;
+}

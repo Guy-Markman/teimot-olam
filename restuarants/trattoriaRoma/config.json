@@ -1,4 +1,5 @@
 {
     "menuFile": "data/trattoria-roma-menu.json",
-    "menuTheme": "boxes"
+    "menuTheme": "boxes",
+    "name": "trattoria-roma"
 }
