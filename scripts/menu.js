@@ -1,16 +1,14 @@
 window.appConfig = null;
 
-
 async function getConfig() {
     try {
-        const response = await fetch('./config.json');
-        if (!response.ok)
-            throw new Error('Failed to load config.json');
+        const response = await fetch("./config.json");
+        if (!response.ok) throw new Error("Failed to load config.json");
         config = await response.json();
         window.appConfig = config;
         return config;
     } catch (error) {
-        console.error('Error loading config:', error);
+        console.error("Error loading config:", error);
         return null;
     }
 }
@@ -18,26 +16,24 @@ async function getConfig() {
 async function getMenu(location) {
     try {
         const response = await fetch(location);
-        if (!response.ok)
-            throw new Error('Failed to load menu json file');
+        if (!response.ok) throw new Error("Failed to load menu json file");
     } catch (error) {
-        console.error('Error loading menu: ', error);
+        console.error("Error loading menu: ", error);
         return null;
     }
     return fetch(location)
-    .then(response =>{
-        if (!response.ok)
-            throw new Error('Failed to load menu json file');
-        return response.json();
-    })
-    .catch(error => {
-        console.error('Error loading menu: ', error);
-    });
+        .then((response) => {
+            if (!response.ok) throw new Error("Failed to load menu json file");
+            return response.json();
+        })
+        .catch((error) => {
+            console.error("Error loading menu: ", error);
+        });
 }
 
-async function loadCategory(dishes, container) {
+async function loadCategoryBoxes(dishes, container) {
     const template = document.getElementById("dish-template");
-    Object.values(dishes).forEach(dish => {
+    Object.values(dishes).forEach((dish) => {
         const clone = template.content.cloneNode(true);
         clone.querySelector("h3").textContent = dish.name;
         clone.querySelector(".dishDescription").textContent = dish.description;
@@ -47,10 +43,29 @@ async function loadCategory(dishes, container) {
         img.src = dish.image;
         img.alt = dish.name;
 
-        clone.querySelector(".addButton").onclick = function() {addItem(dish.name, dish.price)};
+        clone.querySelector(".addButton").onclick = function () {
+            addItem(dish.name, dish.price);
+        };
 
         container.append(clone);
         return null;
+    });
+}
+
+function loadCategoryLines(items, container) {
+    const template = document.getElementById("menu-line-template");
+    items.forEach((dish) => {
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector("h3").textContent = dish.name;
+        clone.querySelector(".dishDescription").textContent = dish.description;
+        clone.querySelector(".price").textContent = dish.price;
+
+        const img = clone.querySelector(".dishImage");
+        img.src = dish.image;
+        img.alt = dish.name;
+
+        container.append(clone);
     });
 }
 
@@ -59,21 +74,22 @@ async function load() {
     window.appConfig = config;
     const menu = await getMenu(config.menuFile);
     const main = document.getElementsByTagName("main")[0];
+
     Object.entries(menu.categories).forEach(([category, items]) => {
         const catElement = document.createElement("section");
         main.append(catElement);
-        
+
         catElement.classList.add("category");
         const title = document.createElement("h2");
         catElement.append(title);
         title.textContent = category;
         title.classList.add("titleBox", "titleBoxBakery");
-        
+
         const dishList = document.createElement("div");
         catElement.append(dishList);
         dishList.classList.add("dishList");
 
-        loadCategory(items, dishList);
+        loadCategoryBoxes(items, dishList);
     });
 }
 

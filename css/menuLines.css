@@ -1,0 +1,94 @@
+/* === Menu Page - Lines Layout === */
+
+.menu-page {
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+
+/* Menu section */
+.menu-section {
+  margin-bottom: 3em;
+}
+
+.menu-title {
+  background-color: #cc3333;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.5em;
+  border-radius: 0.25em;
+  margin-bottom: 1.5em;
+}
+
+/* Dish container - lines style */
+.dish {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  margin-bottom: 2em;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+.dish img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.25em;
+}
+
+/* Dish info */
+.dish-info {
+  flex: 1;
+  text-align: right;
+}
+
+.dish-info h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.3em;
+}
+
+.dish-info p {
+  margin: 0 0 0.5em;
+  color: #444;
+  line-height: 1.4;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #222;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+/* Make sure buttons appear after price */
+.addButton {
+  margin-top: 0.8em;
+}
+
+
+/* Override button to match soft pink/red burger theme */
+body.restaurant-page.burger-theme .addButton {
+  background-color: #ff3366; /* bold strawberry pink */
+  color: white;
+  font-size: 1rem;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body.restaurant-page.burger-theme .addButton:hover {
+  background-color: #e91e63;
+  transform: scale(1.05);
+}
+
+body.restaurant-page.burger-theme .addButton:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

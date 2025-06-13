@@ -4,140 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UMA – תפריט</title>
-
-  <!-- CSS כללי של הפרויקט -->
   <link rel="stylesheet" href="../../css/global.css">
-  <!-- CSS מותאם לסושי -->
+  <link rel="stylesheet" href="../../css/menus.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="restaurant-page sushi-theme">
 
-  <header class="main-header">
-    <h1>– תפריט –</h1>
-    <a class="back-btn" href="restaurant.html">← חזרה לדף הבית</a>
+  <template id="dish-template">
+    <article class="dish">
+      <div class="dishText">
+        <h3></h3>
+        <p class="dishDescription"></p>
+        <p class="dishPrice"></p>
+        <button class="addButton">הוסף לסל</button>
+      </div>
+      <figure>
+        <img class="dishImage" alt="" />
+      </figure>
+    </article>
+  </template>
+
+  <template id="cart-item-template">
+    <li>
+      <span class="itemTitle"></span>
+      <span class="itemPrice"></span>
+      <button class="removeButton">x</button>
+    </li>
+  </template>
+
+  <header class="resturantHeader">
+    <h1>UMA</h1>
   </header>
 
-  <main class="menu-page">
+  <main></main>
 
-    <!-- מנות ראשונות -->
-    <section class="menu-section">
-      <h2 class="menu-title">מנות ראשונות</h2>
+  <aside id="cartWin" class="cartWin">
+    <h4>סל קניות 🛒</h4>
+    <ul class="cart">
+      <li id="cartList"></li>
+    </ul>
+    <span class="total">סך הכל:</span>
+    <span id="total" class="total">0</span>
+    <span class="total">₪</span>
+    <button onclick="clearCart()">רוקן סל</button>
+  </aside>
 
-      <div class="dish">
-        <img src="imgs/edamame.jpg" alt=" אדממה">
-        <div class="dish-info">
-          <h3> אדממה </h3>
-          <p>פולי סויה טריים במלח ים גס</p>
-          <span class="price">₪25</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/gyoza.jpg" alt="גיוזה קראנצ׳י">
-        <div class="dish-info">
-          <h3>גיוזה קראנצ׳י</h3>
-          <p>כיסוני בצק ממולאים בשר חזיר וירקות, מטוגנים זהובים</p>
-          <span class="price">₪38</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/miso_soup.jpg" alt="מרק מיסו">
-        <div class="dish-info">
-          <h3>מרק מיסו</h3>
-          <p>מרק אצות עם טופו ובצל ירוק, בייס שכבות עמוק של טעם</p>
-          <span class="price">₪18</span>
-        </div>
-      </div>
+  <footer>
+    <section class="links">
+      <a href="restaurant.html">חזרה לדף המסעדה</a>
     </section>
+  </footer>
 
-    <!-- מנות עיקריות -->
-    <section class="menu-section">
-      <h2 class="menu-title">מנות עיקריות</h2>
-
-      <div class="dish">
-        <img src="imgs/nigiri_set.jpg" alt="סשן ניגירי מיוחד">
-        <div class="dish-info">
-          <h3>סשן ניגירי מיוחד</h3>
-          <p>10 יחידות ניגירי פרימיום עם דג טונה, סלמון וקארפצ׳יו לבן</p>
-          <span class="price">₪110</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/uramaki.jpg" alt="אוּראמאקי סלמון קריספי">
-        <div class="dish-info">
-          <h3>אוּראמאקי סלמון קריספי</h3>
-          <p>רול פנימי עם סלמון, קראנץ׳ בטמפורה, קליפה חיצונית של אורז ואצות</p>
-          <span class="price">₪75</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/sashimi_plate.jpg" alt="צלחת סשימי">
-        <div class="dish-info">
-          <h3>צלחת סשימי</h3>
-          <p>15 פרוסות סשימי במבחר דגים טריים (טונה, סולמון, דניס)</p>
-          <span class="price">₪125</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- קינוחים -->
-    <section class="menu-section">
-      <h2 class="menu-title">קינוחים</h2>
-
-      <div class="dish">
-        <img src="imgs/mochi.jpg" alt="מוצ׳י גלידה">
-        <div class="dish-info">
-          <h3>מוצ׳י גלידה</h3>
-          <p>3 כדורי בצק אורז ממולאים בגלידת פיסטוק, וניל ושוקו</p>
-          <span class="price">₪30</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/green_tea_icecream.jpg" alt="גלידת תה ירוק">
-        <div class="dish-info">
-          <h3>גלידת תה ירוק</h3>
-          <p>קרם עשיר בטעם מאצ׳ה יפני אותנטי</p>
-          <span class="price">₪28</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- שתייה -->
-    <section class="menu-section">
-      <h2 class="menu-title">שתייה</h2>
-
-      <div class="dish">
-        <img src="imgs/sake.jpg" alt=" סקה חם">
-        <div class="dish-info">
-          <h3> סקה חם</h3>
-          <p>200 מ״ל של סקה איכותי חם, מתאים לערב קריר</p>
-          <span class="price">₪45</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/green_tea.jpg" alt="תה ירוק קר">
-        <div class="dish-info">
-          <h3>תה ירוק קר</h3>
-          <p>כוס תה ירוק בטמפרטורת חדר, מרענן וקליל</p>
-          <span class="price">₪18</span>
-        </div>
-      </div>
-
-      <div class="dish">
-        <img src="imgs/japanese_beer.jpg" alt="בירה יפנית">
-        <div class="dish-info">
-          <h3>בירה יפנית (Asahi)</h3>
-          <p>330 מ״ל בירה קרה, יפנית קלאסית</p>
-          <span class="price">₪32</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
+  <script src="../../scripts/menu.js"></script>
+  <script src="../../scripts/cart.js"></script>
+  <script>
+    init();
+  </script>
 </body>
 </html>
