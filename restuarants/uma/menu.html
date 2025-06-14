@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UMA – תפריט</title>
-  <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="../../css/menus.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="restaurant-page sushi-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMA – תפריט</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/menus.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="restaurant-page sushi-theme">
+    <template id="dish-template">
+      <article class="dish">
+        <div class="dishText">
+          <h3></h3>
+          <p class="dishDescription"></p>
+          <p class="dishPrice"></p>
+          <button class="addButton">הוסף לסל</button>
+        </div>
+        <figure>
+          <img class="dishImage" alt="" />
+        </figure>
+      </article>
+    </template>
 
-  <template id="dish-template">
-    <article class="dish">
-      <div class="dishText">
-        <h3></h3>
-        <p class="dishDescription"></p>
-        <p class="dishPrice"></p>
-        <button class="addButton">הוסף לסל</button>
-      </div>
-      <figure>
-        <img class="dishImage" alt="" />
-      </figure>
-    </article>
-  </template>
+    <template id="cart-item-template">
+      <li>
+        <span class="itemTitle"></span>
+        <span class="itemPrice"></span>
+        <button class="removeButton">x</button>
+      </li>
+    </template>
 
-  <template id="cart-item-template">
-    <li>
-      <span class="itemTitle"></span>
-      <span class="itemPrice"></span>
-      <button class="removeButton">x</button>
-    </li>
-  </template>
+    <header class="resturantHeader">
+      <h1>UMA</h1>
+    </header>
 
-  <header class="resturantHeader">
-    <h1>UMA</h1>
-  </header>
+    <main></main>
 
-  <main></main>
+    <aside id="cartWin" class="cartWin">
+      <h4>סל קניות 🛒</h4>
+      <ul class="cart">
+        <li id="cartList"></li>
+      </ul>
+      <span class="total">סך הכל:</span>
+      <span id="total" class="total">0</span>
+      <span class="total">₪</span>
+      <button onclick="clearCart()">רוקן סל</button>
+    </aside>
 
-  <aside id="cartWin" class="cartWin">
-    <h4>סל קניות 🛒</h4>
-    <ul class="cart">
-      <li id="cartList"></li>
-    </ul>
-    <span class="total">סך הכל:</span>
-    <span id="total" class="total">0</span>
-    <span class="total">₪</span>
-    <button onclick="clearCart()">רוקן סל</button>
-  </aside>
+    <footer>
+      <section class="links">
+        <a href="restaurant.html">חזרה לדף המסעדה</a>
+      </section>
+    </footer>
 
-  <footer>
-    <section class="links">
-      <a href="restaurant.html">חזרה לדף המסעדה</a>
-    </section>
-  </footer>
-
-  <script type="module" src="../../scripts/menu.js"></script>
-  <script src="../../scripts/cart.js"></script>
-</body>
+    <script type="module" src="../../scripts/menu.js"></script>
+    <script src="../../scripts/cart.js"></script>
+  </body>
 </html>

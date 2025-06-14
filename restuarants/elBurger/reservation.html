@@ -1,69 +1,70 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JunkyBurger – הזמנת מקום</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JunkyBurger – הזמנת מקום</title>
 
-  <link rel="stylesheet" href="../../css/global.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="restaurant-page burger-theme">
-  <header class="main-header">
-    <h1>– הזמנת מקום –</h1>
-    <a class="back-btn" href="restaurant.html">← חזרה לדף הבית</a>
-  </header>
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="restaurant-page burger-theme">
+    <header class="main-header">
+      <h1>– הזמנת מקום –</h1>
+      <a class="back-btn" href="restaurant.html">← חזרה לדף הבית</a>
+    </header>
 
-  <main class="reservation-page">
+    <main class="reservation-page">
+      <div
+        id="reservation-message"
+        style="display: none; text-align: center; margin-bottom: 16px; color: red; font-weight: bold"
+      ></div>
 
+      <form id="reservation-form">
+        <div class="form-group">
+          <label>שם מלא</label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label>טלפון</label>
+          <input type="tel" required />
+        </div>
+        <div class="form-group">
+          <label>אימייל</label>
+          <input type="email" />
+        </div>
+        <div class="form-group">
+          <label>מספר סועדים</label>
+          <input type="number" min="1" required />
+        </div>
+        <div class="form-group">
+          <label>תאריך הגעה</label>
+          <input type="date" required />
+        </div>
+        <div class="form-group">
+          <label>הערות נוספות</label>
+          <textarea rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">שלח הזמנה</button>
+      </form>
+    </main>
 
-    <div id="reservation-message" style="display:none; text-align:center; margin-bottom:16px; color:red; font-weight:bold;"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('reservation-form');
+        const msgBox = document.getElementById('reservation-message');
 
-    <form id="reservation-form">
-      <div class="form-group">
-        <label>שם מלא</label>
-        <input type="text" required>
-      </div>
-      <div class="form-group">
-        <label>טלפון</label>
-        <input type="tel" required>
-      </div>
-      <div class="form-group">
-        <label>אימייל</label>
-        <input type="email">
-      </div>
-      <div class="form-group">
-        <label>מספר סועדים</label>
-        <input type="number" min="1" required>
-      </div>
-      <div class="form-group">
-        <label>תאריך הגעה</label>
-        <input type="date" required>
-      </div>
-      <div class="form-group">
-        <label>הערות נוספות</label>
-        <textarea rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn-submit">שלח הזמנה</button>
-    </form>
-  </main>
+        form.addEventListener('submit', (e) => {
+          const name = form.querySelector('input[type="text"]').value.trim();
+          const phone = form.querySelector('input[type="tel"]').value.trim();
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form   = document.getElementById('reservation-form');
-      const msgBox = document.getElementById('reservation-message');
-
-      form.addEventListener('submit', e => {
-        const name  = form.querySelector('input[type="text"]').value.trim();
-        const phone = form.querySelector('input[type="tel"]').value.trim();
-
-        if (!name || !phone) {
-          e.preventDefault();
-          msgBox.textContent = 'אנא מלא/י שם מלא ומספר טלפון כדי לשלוח את ההזמנה.';
-          msgBox.style.display = 'block';
-        }
+          if (!name || !phone) {
+            e.preventDefault();
+            msgBox.textContent = 'אנא מלא/י שם מלא ומספר טלפון כדי לשלוח את ההזמנה.';
+            msgBox.style.display = 'block';
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>

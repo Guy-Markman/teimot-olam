@@ -5,7 +5,6 @@ if (user) {
 }
 
 // לחיצה על כפתור – מעבר לעמוד התחברות
-document.getElementById('login-btn')
-        .addEventListener('click', () => {
+document.getElementById('login-btn').addEventListener('click', () => {
   window.location.href = 'login.html';
 });

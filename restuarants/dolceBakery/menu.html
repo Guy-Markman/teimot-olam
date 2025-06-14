@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/global.css" />
@@ -8,55 +8,55 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/menuRest.css" />
     <title>מאפיית דולצ'ה - תפריט</title>
-</head>
-<body>
+  </head>
+  <body>
     <template id="dish-template">
-        <article class="dish">
-            <div class="dishText">
-                <h3></h3>
-                <p class="dishDescription"></p>
-                <p class="dishPrice"></p>
-                <button class="addButton">הוסף לתפריט</button>
-            </div>
-            <figure>
-                <img class="dishImage" alt="" />
-            </figure>
-        </article>
+      <article class="dish">
+        <div class="dishText">
+          <h3></h3>
+          <p class="dishDescription"></p>
+          <p class="dishPrice"></p>
+          <button class="addButton">הוסף לתפריט</button>
+        </div>
+        <figure>
+          <img class="dishImage" alt="" />
+        </figure>
+      </article>
     </template>
 
     <template id="cart-item-template">
-        <li>
-            <span class="itemTitle"></span>
-            <span class="itemPrice"></span>
-            <button class="removeButton">x</button>
-        </li>
+      <li>
+        <span class="itemTitle"></span>
+        <span class="itemPrice"></span>
+        <button class="removeButton">x</button>
+      </li>
     </template>
 
     <header class="resturantHeader">
-        <figure>
-            <img src="images/logo.jpg" alt="לוגו" class="logo" />
-        </figure>
-        <h1>מאפיית דולצ'ה</h1>
+      <figure>
+        <img src="images/logo.jpg" alt="לוגו" class="logo" />
+      </figure>
+      <h1>מאפיית דולצ'ה</h1>
     </header>
 
     <main></main>
 
     <aside id="cartWin" class="cartWin">
-        <h4>סל קניות 🛒</h4>
-        <ul class="cart" id="cartList"></ul>
-        <span class="total">סך הכל:</span>
-        <span id="total" class="total">0</span>
-        <span class="total">₪</span>
-        <button onclick="clearCart()">רוקן סל</button>
+      <h4>סל קניות 🛒</h4>
+      <ul class="cart" id="cartList"></ul>
+      <span class="total">סך הכל:</span>
+      <span id="total" class="total">0</span>
+      <span class="total">₪</span>
+      <button onclick="clearCart()">רוקן סל</button>
     </aside>
 
     <footer>
-        <section class="links">
-            <a href="restaurant.html">חזרה למאפייה</a>
-        </section>
+      <section class="links">
+        <a href="restaurant.html">חזרה למאפייה</a>
+      </section>
     </footer>
 
     <script type="module" src="../../scripts/menu.js"></script>
     <script src="../../scripts/cart.js"></script>
-</body>
+  </body>
 </html>
