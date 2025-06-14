@@ -1,35 +1,6 @@
+import { getConfig, getMenu } from "./util.js";
+
 window.appConfig = null;
-
-async function getConfig() {
-    try {
-        const response = await fetch("./config.json");
-        if (!response.ok) throw new Error("Failed to load config.json");
-        config = await response.json();
-        window.appConfig = config;
-        return config;
-    } catch (error) {
-        console.error("Error loading config:", error);
-        return null;
-    }
-}
-
-async function getMenu(location) {
-    try {
-        const response = await fetch(location);
-        if (!response.ok) throw new Error("Failed to load menu json file");
-    } catch (error) {
-        console.error("Error loading menu: ", error);
-        return null;
-    }
-    return fetch(location)
-        .then((response) => {
-            if (!response.ok) throw new Error("Failed to load menu json file");
-            return response.json();
-        })
-        .catch((error) => {
-            console.error("Error loading menu: ", error);
-        });
-}
 
 async function loadCategoryBoxes(dishes, container) {
     const template = document.getElementById("dish-template");
@@ -98,3 +69,5 @@ async function init() {
     const id = getRestaurantId();
     loadCart(id);
 }
+
+init();

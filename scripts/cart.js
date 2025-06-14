@@ -5,12 +5,12 @@ function getRestaurantId() {
 }
 
 function saveCart() {
-    const restaurantId = window.appConfig?.name || "default";
+    const restaurantId = getRestaurantId();
     localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
 }
 
 function loadCart() {
-    const restaurantId = window.appConfig?.name || "default";
+    const restaurantId = getRestaurantId()
     cartItems = JSON.parse(localStorage.getItem(`cart-${getRestaurantId()}`) || "[]");
 
     cartItems.forEach(({ name, price }) => {
