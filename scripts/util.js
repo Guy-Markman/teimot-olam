@@ -29,3 +29,12 @@ export async function getMenu(location) {
       console.error('Error loading menu: ', error);
     });
 }
+
+export async function getRestaurantId() {
+  if (!window.appConfig) {
+    window.appConfig = await getConfig();
+  }
+
+  return window.appConfig?.name || "default";
+}
+

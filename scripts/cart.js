@@ -1,15 +1,13 @@
-let cartItems = [];
+import { getRestaurantId } from "./util.js";
 
-function getRestaurantId() {
-  return window.appConfig?.name || 'default';
-}
+let cartItems = [];
 
 function saveCart() {
   const restaurantId = getRestaurantId();
   localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
 }
 
-function loadCart() {
+export function loadCart() {
   const restaurantId = getRestaurantId();
   cartItems = JSON.parse(localStorage.getItem(`cart-${getRestaurantId()}`) || '[]');
 
@@ -33,7 +31,7 @@ function loadCart() {
   });
 }
 
-function clearCart() {
+export function clearCart() {
   const cart = document.querySelector('.cart');
   cart.innerHTML = ''; // remove all items
 
@@ -50,7 +48,7 @@ function updateTotal(amount) {
   totalSpan.textContent = parseInt(totalSpan.textContent) + amount;
 }
 
-function addItem(name, price) {
+export function addItem(name, price) {
   const template = document.getElementById('cart-item-template');
   const item = template.content.cloneNode(true);
   item.querySelector('.itemTitle').textContent = name;
@@ -69,7 +67,7 @@ function addItem(name, price) {
   localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
 }
 
-function removeItem(name, price) {
+export function removeItem(name, price) {
   const restaurantId = window.appConfig?.name || 'default';
 
   const index = cartItems.findIndex((item) => item.name === name && item.price === price);

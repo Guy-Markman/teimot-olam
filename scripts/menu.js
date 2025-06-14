@@ -1,4 +1,5 @@
-import { getConfig, getMenu } from './util.js';
+import { getConfig, getMenu, getRestaurantId } from './util.js';
+import { loadCart, clearCart, addItem, removeItem } from './cart.js';
 
 window.appConfig = null;
 
@@ -20,23 +21,6 @@ async function loadCategoryBoxes(dishes, container) {
 
     container.append(clone);
     return null;
-  });
-}
-
-function loadCategoryLines(items, container) {
-  const template = document.getElementById('menu-line-template');
-  items.forEach((dish) => {
-    const clone = template.content.cloneNode(true);
-
-    clone.querySelector('h3').textContent = dish.name;
-    clone.querySelector('.dishDescription').textContent = dish.description;
-    clone.querySelector('.price').textContent = dish.price;
-
-    const img = clone.querySelector('.dishImage');
-    img.src = dish.image;
-    img.alt = dish.name;
-
-    container.append(clone);
   });
 }
 
@@ -71,3 +55,6 @@ async function init() {
 }
 
 init();
+window.clearCart = clearCart;
+window.addItem = addItem;
+window.removeItem = removeItem;
