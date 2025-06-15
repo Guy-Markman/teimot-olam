@@ -1,7 +1,10 @@
 import { getConfig, getMenu, getRestaurantId } from './util.js';
 import { loadCart, clearCart, addItem, removeItem } from './cart.js';
+import {getLocalMenu} from './addMeal.js'
 
 window.appConfig = null;
+
+
 
 async function loadCategoryBoxes(dishes, container) {
   const template = document.getElementById('dish-template');
@@ -27,7 +30,7 @@ async function loadCategoryBoxes(dishes, container) {
 async function load() {
   const config = await getConfig();
   window.appConfig = config;
-  const menu = await getMenu(config.menuFile);
+  const menu = await getCombinedMenu();
   const main = document.getElementsByTagName('main')[0];
 
   Object.entries(menu.categories).forEach(([category, items]) => {
@@ -52,6 +55,20 @@ async function init() {
   await load();
   const id = getRestaurantId();
   loadCart(id);
+}
+
+async function getCombinedMenu() {
+  const baseMenu = await getMenu();
+  const storedMenu = await getLocalMenu();
+
+  for (const [category, dishes] of Object.entries(storedMenu.categories)) {
+    if (!baseMenu.categories[category]) {
+      baseMenu.categories[category] = [];
+    }
+    baseMenu.categories[category].push(...dishes);
+  }
+
+  return baseMenu;
 }
 
 init();

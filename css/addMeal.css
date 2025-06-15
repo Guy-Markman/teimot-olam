@@ -1,0 +1,43 @@
+label, input, select {
+    display:block;
+    margin-bottom: 0.25em;
+}
+
+:root {
+    direction: rtl;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1em;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: #f2f2f2;
+  height: 50px;
+  vertical-align: middle;
+}
+
+th {
+  font-weight: bold;
+}
+
+td figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

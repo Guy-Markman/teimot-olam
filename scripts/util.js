@@ -12,23 +12,27 @@ export async function getConfig() {
   }
 }
 
-export async function getMenu(location) {
+export async function fetchMenu(location) {
   try {
     const response = await fetch(location);
-    if (!response.ok) throw new Error('Failed to load menu json file');
+    if (!response.ok) throw new Error("Failed to load menu JSON file");
+    return await response.json();
   } catch (error) {
-    console.error('Error loading menu: ', error);
+    console.error("Error loading menu from:", location, error);
     return null;
   }
-  return fetch(location)
-    .then((response) => {
-      if (!response.ok) throw new Error('Failed to load menu json file');
-      return response.json();
-    })
-    .catch((error) => {
-      console.error('Error loading menu: ', error);
-    });
 }
+
+export async function getMenu() {
+  try {
+    return await fetchMenu(window.appConfig.menuFile);
+  } catch (error) {
+    const config = await getConfig();
+    window.appConfig = config;
+    return await fetchMenu(config.menuFile);
+  }
+}
+
 
 export async function getRestaurantId() {
   if (!window.appConfig) {

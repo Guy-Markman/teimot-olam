@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/addMeal.css" />
+    <title>הוספת מנה</title>
+  </head>
+  <body>
+    <h1>ניהול תפריט מסעדה</h1>
+    <section>
+      <h2>הוספת מנה חדשה</h2>
+      <!--בחרתי לשנות את הדרישות מאט על מנת שיתאימו לכל המנות הנמצאות כרגע במערכת-->
+      <form autocomplete="on" name="newDish">
+        <label for="name">שם המנה:</label>
+        <input type="text" name="name" pattern="^[A-Za-z\u0590-\u05FF0-9\s\-׳]+$" required />
+        <label for="category">קטגוריה:</label>
+        <select name="category">
+        </select>
+        <label for="price">מחיר (₪):</label>
+        <input type="number" name="price" pattern="^\d+(\.\d+)?$" required />
+        <label for="description">תיאור המנה: </label>
+        <input type="text" name="description" required />
+        <label for="imagePath">נתיב תמונה למנה: </label>
+        <input type="text" name="image" pattern="^.*\.(jpg|jpeg|png|gif|webp)$" />
+        <input type="submit" value="הוסף מנה" />
+      </form>
+    </section>
+    <section>
+      <h2>רשימת מנות קיימות</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>שם</th>
+            <th>קטגוריה</th>
+            <th>מחיר</th>
+            <th>תיאור המנה</th>
+            <th>תמונה</th>
+            <th>עדכון</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <script type="module" src="../../scripts/addMeal.js"></script>
+    <script type="module">
+      init();
+    </script>
+  </body>
+</html>
