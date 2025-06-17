@@ -1,0 +1,59 @@
+/* לוגו גדול יותר */
+body.restaurant-page.sushi-theme .main-header .rest-logo {
+    width: 500px;
+    height: auto;
+}
+
+/* כותרת גדולה וממוסגרת */
+body.restaurant-page.sushi-theme .main-header h1 {
+    font-size: 2.8rem;
+    color: #f2f2f6;
+    margin: 0;
+}
+
+/* ===== פריסת התיאור + הכפתורים ===== */
+body.restaurant-page.sushi-theme .restaurant-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* כל קטע (תיאור / כפתורים) יתפוס לפחות 300px */
+body.restaurant-page.sushi-theme .restaurant-detail .rest-desc,
+body.restaurant-page.sushi-theme .restaurant-detail .quick-links {
+    flex: 1 1 300px;
+}
+
+/* ממרכז את הטקסט והכפתורים */
+body.restaurant-page.sushi-theme .restaurant-detail .rest-desc {
+    font-size: 1.1rem;
+    color: #f2f2f6;
+    line-height: 1.5;
+}
+
+/* פריסת הכפתורים וסטייל נוסף */
+body.restaurant-page.sushi-theme .restaurant-detail .quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+/* סטייל על הכפתורים */
+body.restaurant-page.sushi-theme .quick-links .btn {
+    background-color: #453838;
+    color: #f2f2f6;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    width: 180px;
+}
+
+body.restaurant-page.sushi-theme .quick-links .btn:hover {
+    background-color: #574747;
+}

@@ -1,0 +1,46 @@
+/* ===== Common styles for all El Burger pages ===== */
+html, body {
+    background-color: #ff9a9a !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Helvetica, Arial, sans-serif;
+}
+
+body.restaurant-page.burger-theme {
+    background-color: transparent !important;
+    color: #000000; 
+    text-align: center;
+}
+
+/* ===== כותרת ראשית ===== */
+body.restaurant-page.burger-theme .main-header {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+body.restaurant-page.burger-theme .main-header h1 {
+    color: #ff0000; 
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* ===== כפתור חזרה ===== */
+body.restaurant-page.burger-theme .main-header .back-btn {
+    display: inline-block;
+    background: none;
+    color: #3E2723;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+}
+
+body.restaurant-page.burger-theme .main-header .back-btn:hover {
+    color: #8B5E3C; 
+}

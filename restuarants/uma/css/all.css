@@ -1,0 +1,73 @@
+html, body {
+    background-color: #343434 !important;
+}
+
+body.restaurant-page.sushi-theme {
+    background-color: transparent !important;
+    color: #f2f2f6;
+}
+
+/* ===== כותרת ראשית ===== */
+body.restaurant-page.sushi-theme .main-header {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+body.restaurant-page.sushi-theme .main-header h1 {
+    color: #f2f2f6;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+/* ===== כפתור חזרה ===== */
+body.restaurant-page.sushi-theme .main-header .back-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    background-color: #453838;
+    color: #f2f2f6;
+    text-decoration: none;
+    margin-bottom: 16px;
+    transition: background 0.3s;
+}
+
+body.restaurant-page.sushi-theme .main-header .back-btn:hover {
+    background-color: #574747;
+}
+
+/* ===== כפתורים כלליים ===== */
+.btn-submit,
+button,
+.quick-links .btn {
+    background-color: #453838;
+    color: #f2f2f6;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover,
+button:hover,
+.quick-links .btn:hover {
+    background-color: #574747;
+}
+
+/* עיצוב דף ראשי */
+body.restaurant-page.sushi-theme {
+    text-align: center;
+}
+
+/* הגדרת ה־header כ־flex מרכזי */
+body.restaurant-page.sushi-theme .main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0;
+}
