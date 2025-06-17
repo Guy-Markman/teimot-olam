@@ -1,4 +1,4 @@
-import { getLocalMenuName, getMenu, checkUserLoggedIn} from './util.js';
+import { getLocalMenuName, getMenu, checkUserLoggedIn, getLocalMenu} from './util.js';
 
 function itemInMenu(item, menu, category) {
   return (menu.categories?.[category] ?? []).some((d) => d.name === item.name);
