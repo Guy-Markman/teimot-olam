@@ -1,0 +1,38 @@
+{
+  "Yossi": [
+    {
+      "name": "UMA סושי בר",
+      "folder": "restuarants/uma",
+      "img": "imgs/sushi.jpg",
+      "desc": "משנת 2016 אומה היא הנקודה הכי ייחודית ועדכנית במבנה מרהיב לשימור בזכרון יעקב."
+    },
+    {
+      "name": "Trattoria Roma",
+      "folder": "restuarants/trattoriaRoma",
+      "img": "imgs/pasta.jpg",
+      "desc": "מסעדה איטלקית אותנטית בלב רומא הקולינרית. מתמחים בפסטות טריות, פיצות בתנור עצים, ויינות איטלקיים משובחים."
+    }
+  ],
+  "Dana": [
+    {
+      "name": "מאפיית דולצ׳ה",
+      "folder": "restuarants/dolceBakery",
+      "img": "imgs/pastries.jpg",
+      "desc": "מאפייה בוטיק איטלקית-צרפתית. מתמחים בקרואסונים חמאתיים, עוגות אישיות ולחמי מחמצת טריים."
+    },
+    {
+      "name": "El Burger",
+      "folder": "restuarants/elBurger",
+      "img": "imgs/hamburger.jpg",
+      "desc": "מזללת דיינר אמריקאית בלב שוק לוינסקי. ההמבורגר הדגל הוא ה\"דאבל צ׳יז\"."
+    }
+  ],
+  "Rami": [
+    {
+      "name": "Yamaji ראמן בר",
+      "folder": "restuarants/yamaji",
+      "img": "imgs/ramen.jpg",
+      "desc": "בר ראמן יפני שנולד מתוך אהבה לטעמים העמוקים והמדויקים של המטבח האסייתי."
+    }
+  ]
+}

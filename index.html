@@ -17,8 +17,10 @@
     <footer>
       <button class="logout" onclick="logout();">התנתקות</button>
     </footer>
-    <script src="scripts/index.js"></script>
-    <script>
+    <script type="module" src="scripts/index.js"></script>
+    <script type="module">
+      import { login, logout } from './scripts/index.js';
+      window.logout = logout;
       login();
     </script>
   </body>
