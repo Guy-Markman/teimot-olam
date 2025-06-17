@@ -1,5 +1,6 @@
 {
     "menuFile": "data/dolce-menu.json",
     "menuTheme": "boxes",
-    "name": "dolce-menu"
+    "name": "dolce-menu",
+    "owner": "Dana"
 }

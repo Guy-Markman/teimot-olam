@@ -7,37 +7,48 @@ label, input, select {
     direction: rtl;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 1em;
-  font-family: inherit;
-  font-size: 1em;
+select {
+  background-color: white;
 }
-
-th, td {
-  border: 1px solid #ccc;
-  text-align: center;
-  background-color: #f2f2f2;
-  height: 50px;
-  vertical-align: middle;
-}
-
-th {
-  font-weight: bold;
-}
-
-td figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+/* Make the table centered with equal side padding */
+table {
+  margin: 1em auto;
+  border-collapse: collapse;
+  table-layout: auto;     /* let column size be determined by widest cell */
+  width: auto;            /* do not force full-width */
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 0;             /* no internal padding on table element */
+}
+
+/* Header and data cells styling */
+th, td {
+  border: 1px solid #ccc;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+  background-color: white;
+  white-space: nowrap;
+}
+
+/* Header only: gray background */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Optional: limit image column */
+td img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

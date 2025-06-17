@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/addMeal.css" />
+    <link rel="stylesheet" href="../../css/menu-filter.css" />
+    <link rel="stylesheet" href="css/all.css" />
+
+    <title>צפייה בתפריט</title>
+  </head>
+  <body>
+    <template id="template-category">
+      <input type="checkBox" name="cat" value="" checked />
+      <span></span>
+    </template>
+    <main>
+      <fieldset id="filtersDiv">
+        <h2>סינון לפי קטגוריה</h2>
+        <fieldset id="categoryFilter" class="noBorder"></fieldset>
+
+        <h2 for="priceFilter">סינון לפי מחיר:</h2>
+        <select id="priceFilter">
+          <option value="all">כל המחירים</option>
+          <option value="30">מעל 30₪</option>
+          <option value="60">מעל 60₪</option>
+          <option value="90">מעל 90₪</option>
+        </select>
+      </fieldset>
+
+      <table>
+        <thead>
+          <tr>
+            <th>שם</th>
+            <th>קטגוריה</th>
+            <th>מחיר</th>
+            <th>תיאור המנה</th>
+            <th>תמונה</th>
+          </tr>
+        </thead>
+        <tbody id="menuTable"></tbody>
+      </table>
+    </main>
+    <script type="module" src="../../scripts/menu-filter.js"></script>
+    <script type="module">
+      init();
+    </script>
+  </body>
+</html>

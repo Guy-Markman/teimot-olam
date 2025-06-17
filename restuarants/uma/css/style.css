@@ -242,3 +242,10 @@ body.restaurant-page.sushi-theme {
     background-color: #574747;
   }
   
+  fieldset {
+    color: white;
+  }
+
+  fieldset {
+    color: black;
+  }

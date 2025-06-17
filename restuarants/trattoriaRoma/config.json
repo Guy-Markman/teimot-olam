@@ -1,5 +1,6 @@
 {
     "menuFile": "data/trattoria-roma-menu.json",
     "menuTheme": "boxes",
-    "name": "trattoria-roma"
+    "name": "trattoria-roma",
+    "owner": "Yossi"
 }

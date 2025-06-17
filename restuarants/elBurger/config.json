@@ -1,5 +1,6 @@
 {
     "menuFile": "data/junkyburger-menu.json",
     "menuTheme": "boxes",
-    "name": "elBurger"
+    "name": "elBurger",
+    "owner": "Dana"
 }

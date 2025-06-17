@@ -1,6 +1,5 @@
-import { getConfig, getMenu, getRestaurantId } from './util.js';
+import { getConfig, getRestaurantId, getCombinedMenu } from './util.js';
 import { loadCart, clearCart, addItem, removeItem } from './cart.js';
-import {getLocalMenu} from './addMeal.js'
 
 window.appConfig = null;
 
@@ -55,20 +54,6 @@ async function init() {
   await load();
   const id = getRestaurantId();
   loadCart(id);
-}
-
-async function getCombinedMenu() {
-  const baseMenu = await getMenu();
-  const storedMenu = await getLocalMenu();
-
-  for (const [category, dishes] of Object.entries(storedMenu.categories)) {
-    if (!baseMenu.categories[category]) {
-      baseMenu.categories[category] = [];
-    }
-    baseMenu.categories[category].push(...dishes);
-  }
-
-  return baseMenu;
 }
 
 init();

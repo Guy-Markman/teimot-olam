@@ -1,0 +1,26 @@
+label {
+  display: block;
+}
+
+.noBorder{
+  border: none;
+  margin-bottom: 1em;
+}
+
+#categoryFilter {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping if too long */
+  gap: 1em;         /* space between checkboxes */
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+#categoryFilter input[type="checkbox"] {
+  margin-left: 0.25em;
+}
+
+#filtersDiv {
+  margin: 1em;
+  background-color: lightgray;
+  padding: 1em;
+}

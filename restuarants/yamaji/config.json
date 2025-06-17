@@ -1,5 +1,6 @@
 {
     "menuFile": "data/yamaji-menu.json",
     "menuTheme": "boxes",
-    "name": "yamaji"
+    "name": "yamaji",
+    "owner": "Rami"
 }

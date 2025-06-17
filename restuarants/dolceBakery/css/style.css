@@ -4,6 +4,7 @@ body {
   color: #3e2f2f;
   direction: rtl;
   padding: 20px;
+  padding-bottom: 1em;
 }
 
 h1, h2 {

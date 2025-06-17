@@ -1,19 +1,11 @@
-import { getRestaurantId, getMenu } from './util.js';
+import { getLocalMenuName, getMenu, checkUserLoggedIn} from './util.js';
 
 function itemInMenu(item, menu, category) {
   return (menu.categories?.[category] ?? []).some((d) => d.name === item.name);
 }
 
-async function getLocalMenuName() {
-  const id = await getRestaurantId();
-  return `menu-${id}`;
-}
 
-export async function getLocalMenu() {
-  const key = await getLocalMenuName();
-  const json = localStorage.getItem(key);
-  return json ? JSON.parse(json) : { categories: {} };
-}
+
 
 async function addMealToTable(mealObject, category) {
   const tbody = document.getElementsByTagName('tbody')[0];
@@ -123,6 +115,7 @@ async function loadCategories() {
 
 
 window.init = function () {
+  checkUserLoggedIn();
   document.forms['newDish'].addEventListener('submit', addMeal);
   loadTable();
   loadCategories();
