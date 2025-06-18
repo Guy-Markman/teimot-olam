@@ -1,0 +1,62 @@
+.menu-page .menu-section {
+    margin-top: 40px;
+}
+
+.menu-page .menu-section:first-of-type {
+    margin-top: 0;
+}
+
+.menu-page .menu-title {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    border-bottom: 2px solid rgba(242, 242, 246, 0.2);
+    padding-bottom: 8px;
+    text-align: right;
+    color: #000000;
+}
+
+.menu-page .menu-section .dish {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(242, 242, 246, 0.1);
+}
+
+.menu-page .menu-section .dish img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.menu-page .menu-section .dish-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+.menu-page .menu-section .dish-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.menu-page .menu-section .dish-info p {
+    margin: 0 0 6px;
+    line-height: 1.4;
+    color: #6b6b6b;
+}
+
+.menu-page .menu-section .dish-info .price {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ff0000;
+}
+
+.links a {
+  background-color: #ff00ae;
+}

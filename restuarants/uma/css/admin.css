@@ -5,3 +5,7 @@ fieldset {
 fieldset {
     color: black;
 }
+
+h1, h2, label {
+  color: white;
+}
