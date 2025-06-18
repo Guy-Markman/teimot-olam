@@ -101,20 +101,30 @@
 
 .cart li {
   display: flex;
+  font-size: 0.9em;
   gap: 20px;
 }
 
 .removeButton {
-  min-width: 1.5em;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  width: 1.5em;
   height: 1.5em;
-  line-height: 1.5em;
   display: flex;
   align-items: center;
-  text-align: center;
   justify-content: center;
-  margin: 0;
-
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.2s;
 }
+
+.removeButton:hover {
+  background: #e60000;
+}
+
 
 .cartWin h4{
   color: white;
@@ -122,4 +132,29 @@
 
 .total {
   color: white;
+}
+
+.cartWin > button {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  font-size: 0.9em;
+  padding: 0.4em 1em;
+  border-radius: 4px;
+}
+
+.cartWin > button-cart:hover {
+  background-color: #a81919;
+  transform: translateY(-1px);
+}
+
+.clear-cartWin > button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
