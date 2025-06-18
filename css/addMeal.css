@@ -5,6 +5,7 @@ label, input, select {
 
 :root {
     direction: rtl;
+    margin: 1em 2em;
 }
 
 select {
