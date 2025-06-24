@@ -1,0 +1,38 @@
+.salesTable {
+  width: 60%;
+  max-width: 40em;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: inherit;
+  font-size:1em;
+  margin: 1em auto;
+
+}
+
+th, td {
+  padding: 0.75em 1em;
+  border: 1px solid #ccc;
+}
+
+thead{
+  background-color: #f0e0d6;
+  font-weight: bold;
+}
+
+.circle-button {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: none;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.circle-button[data-state="active"] {
+  background-color: green;
+}
+
+.circle-button[data-state="inactive"] {
+  background-color: red;
+}

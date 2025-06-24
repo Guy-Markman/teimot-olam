@@ -36,7 +36,38 @@
       </figure>
       <h1>Trattoria Roma</h1>
     </header>
-
+    <section aria-label="טבלת הנחות">
+      <table class="salesTable">
+        <thead>
+          <tr>
+            <th>שם המנה</th>
+            <th>סוג הנחה</th>
+            <th>מחיר הנחה</th>
+            <th>האם ההנחה חלה</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ברוסקטה עגבניות</td>
+            <td>סכום קבוע</td>
+            <td>20</td>
+            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+          </tr>
+          <tr>
+            <td>פסטה טליאטלה ברוטב פטריות כמהין</td>
+            <td>אחוז</td>
+            <td>25</td>
+            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+          </tr>
+          <tr>
+            <td>טירמיסו ביתי</td>
+            <td>חצי מחיר</td>
+            <td>50</td>
+            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <main aria-label="תפריט המסעדה">
       <section id="menuContainer"></section>
     </main>
