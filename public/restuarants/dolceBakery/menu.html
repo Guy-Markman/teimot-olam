@@ -28,26 +28,30 @@
       <li>
         <span class="itemTitle"></span>
         <span class="itemPrice"></span>
-        <button class="removeButton">x</button>
+        <button class="removeButton" aria-label="הסר מהסל">x</button>
       </li>
     </template>
 
     <header class="resturantHeader">
       <figure>
-        <img src="images/logo.jpg" alt="לוגו" class="logo" />
+        <img src="images/logo.jpg" alt="לוגו של מאפיית דולצ'ה" class="logo" />
       </figure>
       <h1>מאפיית דולצ'ה</h1>
     </header>
 
-    <main></main>
+    <main aria-label="תפריט מאפייה">
+      <section id="menuContainer"></section>
+    </main>
 
-    <aside id="cartWin" class="cartWin">
-      <h4>סל קניות 🛒</h4>
+    <aside id="cartWin" class="cartWin" aria-label="סל קניות">
+      <h4>🛒 סל קניות</h4>
       <ul class="cart" id="cartList"></ul>
-      <span class="total">סך הכל:</span>
-      <span id="total" class="total">0</span>
-      <span class="total">₪</span>
-      <button onclick="clearCart()">רוקן סל</button>
+      <div class="totalBox">
+        <span class="total">סך הכל: </span>
+        <span id="total" class="total">0</span>
+        <span class="total">₪</span>
+      </div>
+      <button type="button" onclick="clearCart()">רוקן סל</button>
     </aside>
 
     <footer>

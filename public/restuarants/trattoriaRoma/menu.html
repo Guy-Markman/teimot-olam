@@ -19,7 +19,7 @@
           <button class="addButton">הוסף לתפריט</button>
         </div>
         <figure>
-          <img class="dishImage" alt="" />
+          <img class="dishImage" alt="לוגו המסעדה" />
         </figure>
       </article>
     </template>
@@ -27,7 +27,7 @@
       <li>
         <span class="itemTitle"></span>
         <span class="itemPrice"></span>
-        <button class="removeButton">x</button>
+        <button class="removeButton" aria-label="הסר מהסל">x</button>
       </li>
     </template>
     <header class="resturantHeader">
@@ -36,14 +36,20 @@
       </figure>
       <h1>Trattoria Roma</h1>
     </header>
-    <main></main>
-    <aside id="cartWin" class="cartWin">
-      <h4>סל קניות🛒</h4>
-      <ul class="cart">
-        <li id="cartList"></li>
-      </ul>
-      <span class="total">סך הכל:</span><span id="total" class="total">0</span><span class="total">₪</span>
-      <button onclick="clearCart()">רוקן סל</button>
+
+    <main aria-label="תפריט המסעדה">
+      <section id="menuContainer"></section>
+    </main>
+
+    <aside id="cartWin" class="cartWin" aria-label="סל קניות">
+      <h4>🛒 סל קניות</h4>
+      <ul class="cart" id="cartList"></ul>
+      <div class="totalBox">
+        <span class="total">סך הכל: </span>
+        <span id="total" class="total">0</span>
+        <span class="total">₪</span>
+      </div>
+      <button type="button" onclick="clearCart()">רוקן סל</button>
     </aside>
     <footer>
       <section class="links">

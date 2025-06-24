@@ -30,11 +30,11 @@ async function load() {
   const config = await getConfig();
   window.appConfig = config;
   const menu = await getCombinedMenu();
-  const main = document.getElementsByTagName('main')[0];
+  const menuContainer = document.getElementById('menuContainer');
 
   Object.entries(menu.categories).forEach(([category, items]) => {
     const catElement = document.createElement('section');
-    main.append(catElement);
+    menuContainer.append(catElement);
 
     catElement.classList.add('category');
     const title = document.createElement('h2');
