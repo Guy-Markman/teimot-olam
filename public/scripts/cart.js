@@ -2,14 +2,12 @@ import { getRestaurantId } from "./util.js";
 
 let cartItems = [];
 
-function saveCart() {
-  const restaurantId = getRestaurantId();
-  localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
+async function  saveCart() {
+  localStorage.setItem(`cart-${await getRestaurantId()}`, JSON.stringify(cartItems));
 }
 
-export function loadCart() {
-  const restaurantId = getRestaurantId();
-  cartItems = JSON.parse(localStorage.getItem(`cart-${getRestaurantId()}`) || '[]');
+export async function loadCart() {
+  cartItems = JSON.parse(localStorage.getItem(`cart-${await getRestaurantId()}`) || '[]');
 
   cartItems.forEach(({ name, price }) => {
     const template = document.getElementById('cart-item-template');
@@ -19,9 +17,9 @@ export function loadCart() {
     item.querySelector('.itemPrice').textContent = price;
 
     const li = item.querySelector('li');
-    item.querySelector('.removeButton').onclick = function () {
+    item.querySelector('.removeButton').onclick = async function () {
       li.remove();
-      removeItem(name, price);
+      await removeItem(name, price);
       updateTotal(-Number(price.replace(/\D/g, '')));
       saveCart();
     };
@@ -31,13 +29,13 @@ export function loadCart() {
   });
 }
 
-export function clearCart() {
+export async function clearCart() {
   const cart = document.querySelector('.cart');
   cart.innerHTML = ''; // remove all items
 
   cartItems = []; // clear in-memory array
 
-  const id = getRestaurantId();
+  const id = await getRestaurantId();
   localStorage.removeItem(`cart-${id}`); // clear localStorage
 
   updateTotal(-parseInt(document.querySelector('#total').textContent)); // reset total
@@ -48,7 +46,7 @@ function updateTotal(amount) {
   totalSpan.textContent = parseInt(totalSpan.textContent) + amount;
 }
 
-export function addItem(name, price) {
+export async function addItem(name, price) {
   const template = document.getElementById('cart-item-template');
   const item = template.content.cloneNode(true);
   item.querySelector('.itemTitle').textContent = name;
@@ -64,16 +62,13 @@ export function addItem(name, price) {
 
   updateTotal(parseInt(Number(price.replace(/\D/g, ''))));
   cartItems.push({ name, price });
-  localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
+  localStorage.setItem(`cart-${await getRestaurantId()}`, JSON.stringify(cartItems));
 }
 
-export function removeItem(name, price) {
-  const restaurantId = window.appConfig?.name || 'default';
-
-  const index = cartItems.findIndex((item) => item.name === name && item.price === price);
-
+export async function removeItem(name) {
+  const index = cartItems.findIndex((item) => item.name === name);
   if (index !== -1) {
     cartItems.splice(index, 1);
-    localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
+    localStorage.setItem(`cart-${await getRestaurantId()}`, JSON.stringify(cartItems));
   }
 }

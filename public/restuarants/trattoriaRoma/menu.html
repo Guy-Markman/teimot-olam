@@ -19,10 +19,18 @@
           <button class="addButton">הוסף לתפריט</button>
         </div>
         <figure>
-          <img class="dishImage" alt="לוגו המסעדה" />
+          <img class="dishImage" alt="תמונת המנה" />
         </figure>
       </article>
     </template>
+
+    <template id="category-template">
+      <section class="category">
+        <h2 class="titleBox titleBoxBakery"></h2>
+        <div class="dishList"></div>
+      </section>
+    </template>
+
     <template id="cart-item-template">
       <li>
         <span class="itemTitle"></span>
@@ -30,6 +38,7 @@
         <button class="removeButton" aria-label="הסר מהסל">x</button>
       </li>
     </template>
+
     <header class="resturantHeader">
       <figure>
         <img src="imgs/restulogo.jpg" alt="לוגו" class="logo" />
@@ -51,19 +60,40 @@
             <td>ברוסקטה עגבניות</td>
             <td>סכום קבוע</td>
             <td>20</td>
-            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+            <td>
+              <button
+                class="circle-button"
+                data-state="inactive"
+                title="ההנחה לא פעילה"
+                onclick="toggleSale('ברוסקטה עגבניות')"
+              ></button>
+            </td>
           </tr>
           <tr>
             <td>פסטה טליאטלה ברוטב פטריות כמהין</td>
             <td>אחוז</td>
             <td>25</td>
-            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+            <td>
+              <button
+                class="circle-button"
+                data-state="inactive"
+                title="ההנחה לא פעילה"
+                onclick="toggleSale('פסטה טליאטלה ברוטב פטריות כמהין')"
+              ></button>
+            </td>
           </tr>
           <tr>
             <td>טירמיסו ביתי</td>
             <td>חצי מחיר</td>
             <td>50</td>
-            <td><button class="circle-button" data-state="inactive" title="ההנחה לא פעילה"></button></td>
+            <td>
+              <button
+                class="circle-button"
+                data-state="inactive"
+                title="ההנחה לא פעילה"
+                onclick="toggleSale('טירמיסו ביתי')"
+              ></button>
+            </td>
           </tr>
         </tbody>
       </table>
