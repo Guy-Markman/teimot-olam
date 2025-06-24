@@ -22,12 +22,12 @@ export function loadCart() {
     item.querySelector('.removeButton').onclick = function () {
       li.remove();
       removeItem(name, price);
-      updateTotal(-parseInt(price.substring(1)));
+      updateTotal(-Number(price.replace(/\D/g, '')));
       saveCart();
     };
 
     document.querySelector('.cart').append(item);
-    updateTotal(+parseInt(price.substring(1)));
+    updateTotal(Number(price.replace(/\D/g, '')));
   });
 }
 
@@ -56,13 +56,13 @@ export function addItem(name, price) {
 
   const li = item.querySelector('li');
   item.querySelector('.removeButton').onclick = function () {
-    updateTotal(-1 * parseInt(price.substring(1, 3)));
+    updateTotal(-1 * parseInt(Number(price.replace(/\D/g, ''))));
     li.remove();
   };
 
   document.querySelector('.cart').append(item);
 
-  updateTotal(parseInt(price.substring(1, 3)));
+  updateTotal(parseInt(Number(price.replace(/\D/g, ''))));
   cartItems.push({ name, price });
   localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
 }
@@ -75,8 +75,5 @@ export function removeItem(name, price) {
   if (index !== -1) {
     cartItems.splice(index, 1);
     localStorage.setItem(`cart-${getRestaurantId()}`, JSON.stringify(cartItems));
-
-    const amount = parseInt(price.replace(/\D/g, ''));
-    updateTotal(-amount);
   }
 }
