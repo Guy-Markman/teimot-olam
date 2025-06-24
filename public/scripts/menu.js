@@ -77,6 +77,7 @@ async function toggleSale(mealName) {
     });
     localStorage.setItem(cartKey, JSON.stringify(storedCart));
 
+    location.reload();
 
 
   } catch (err) {
